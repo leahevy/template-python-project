@@ -7,13 +7,12 @@ cd "$(dirname "$0")"
 CMD="$1"
 
 format() {
-    isort --profile=black --check -l 79 .
-    black --check -l 79 .
+    isort --check .
+    black --check .
 }
 
 style() {
-    flake8 --select=E9,F63,F7,F82 --show-source .
-    flake8 --max-complexity=13 --show-source .
+    flake8 .
 }
 
 test() {
@@ -21,7 +20,7 @@ test() {
 }
 
 typechecks() {
-    mypy --pretty --warn-unused-configs --disallow-any-generics --disallow-subclassing-any --disallow-untyped-calls --disallow-untyped-defs --disallow-incomplete-defs --check-untyped-defs --disallow-untyped-decorators --no-implicit-optional --warn-redundant-casts --warn-return-any --no-implicit-reexport --strict-equality .
+    mypy .
 }
 
 build() {

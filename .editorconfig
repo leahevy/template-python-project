@@ -8,8 +8,10 @@ insert_final_newline = false
 end_of_line = lf
 
 [*.py]
+profile = black
 indent_style = space
 max_line_length = 79
+src_paths=src,tests,setup.py
 
 [*.{yml,yaml}]
 indent_style = space
