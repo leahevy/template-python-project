@@ -50,6 +50,12 @@ if [ "${PYTHON_PACKAGE_DESCRIPTION}" = "" ]; then
     PYTHON_PACKAGE_DESCRIPTION="${DEFAULT_PYTHON_PACKAGE_DESCRIPTION}"
 fi
 
+DEFAULT_PYTHON_PACKAGE_SHORT_NAME="tp" 
+read -p "Short package import name (e.g. pd for pandas) [$DEFAULT_PYTHON_PACKAGE_SHORT_NAME]: " PYTHON_PACKAGE_SHORT_NAME
+if [ "${PYTHON_PACKAGE_SHORT_NAME}" = "" ]; then
+    PYTHON_PACKAGE_SHORT_NAME="${DEFAULT_PYTHON_PACKAGE_SHORT_NAME}"
+fi
+
 
 # Rename folders and files
 ##########################
@@ -96,4 +102,6 @@ CURRENT_YEAR="$(date +'%Y')"
 find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,Copyright \(C\)  2022,Copyright (C)  $CURRENT_YEAR,g" || true
 
-rm ./configure-template.sh
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+xargs -n 1 perl -pi -e "s,\"tp\",$PYTHON_PACKAGE_SHORT_NAME,g" || true
+
