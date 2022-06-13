@@ -3,7 +3,7 @@ repos:
     hooks:
     -   id: PreCommit
         name: Pre Commit
-        entry: "./.pre-commit.sh"
+        entry: "./.pre-commit.sh all"
         language: system
         types: [python]
         stages: [commit]

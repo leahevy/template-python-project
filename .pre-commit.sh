@@ -44,6 +44,13 @@ case "$CMD" in
     build)
         build
         ;;
+    all)
+        format
+        style
+        test
+        typechecks
+        build
+        ;;
     *)
         echo "Invalid command $CMD" >&2
         exit 1
