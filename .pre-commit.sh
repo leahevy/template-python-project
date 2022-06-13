@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 CMD="$1"
 
 format() {
-    isort --check -l 79 .
+    isort --profile=black --check -l 79 .
     black --check -l 79 .
 }
 
