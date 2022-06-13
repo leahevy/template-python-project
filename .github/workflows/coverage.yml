@@ -32,8 +32,8 @@ jobs:
         ./.pre-commit.sh test
     - name: Checkout coverage branch
       run: |
-        ls -la
         cp .coverage /tmp/
+        git fetch --all
         git checkout coverage
         git reset --hard
         cp /tmp/.coverage ./
