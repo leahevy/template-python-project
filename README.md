@@ -25,7 +25,7 @@
 
 ## Template
 
-A Python template project for a basic and reusable Python project layout with a setup.py file.
+A Python project template with a setup.py file.
 
 ## Configure
 

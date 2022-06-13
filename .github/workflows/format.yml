@@ -32,5 +32,4 @@ jobs:
         pip install -e .[dev]
     - name: Test formatting
       run: |
-        isort --check .
-        black --check .
+        ./.pre-commit.sh format

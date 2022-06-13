@@ -75,7 +75,7 @@ find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pyc
 xargs -n 1 perl -pi -e "s,template_python_with_setup,$PYTHON_PACKAGE_NAME,g" || true
 
 find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
-xargs -n 1 perl -pi -e "s#A Python template project for a basic and reusable Python project layout with a setup.py file\.#$PYTHON_PACKAGE_DESCRIPTION#g" || true
+xargs -n 1 perl -pi -e "s#A Python project template with a setup.py file\.#$PYTHON_PACKAGE_DESCRIPTION#g" || true
 
 find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,Leah Lackner,$USER_NAME,g" || true

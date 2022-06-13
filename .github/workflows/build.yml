@@ -29,4 +29,4 @@ jobs:
         pip install -e .
     - name: Build source distribution
       run: |
-        python setup.py sdist
+        ./.pre-commit.sh build

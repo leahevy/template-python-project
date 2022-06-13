@@ -5,7 +5,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main_command():
+def main_command() -> None:
     """
     Doctest test:
 
@@ -15,7 +15,7 @@ def main_command():
     print("[green]Hello[/green] [yellow]World[/yellow][red]![/red]")
 
 
-def main():
+def main() -> None:
     app()
 
 

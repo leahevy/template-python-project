@@ -32,5 +32,4 @@ jobs:
         pip install -e .[dev]
     - name: Test style
       run: |
-        flake8 --select=E9,F63,F7,F82 --show-source .
-        flake8 --max-complexity=13 --show-source .
+        ./.pre-commit.sh style

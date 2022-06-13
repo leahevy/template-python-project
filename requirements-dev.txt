@@ -3,3 +3,7 @@ isort
 darker
 flake8
 mypy
+pytest
+pytest-cov
+twine
+pre-commit

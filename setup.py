@@ -21,12 +21,14 @@ setup_info = dict(
     author_email="leah.lackner+github@gmail.com",
     url="https://github.com/leahevy/template-python-with-setup",
     project_urls={
-        "Documentation": "https://github.com/leahevy/template-python-with-setup"
+        "Documentation": "https://github.com/leahevy/"
+        "template-python-with-setup"
         "/blob/master/README.md",
         "Source": "https://github.com/leahevy/template-python-with-setup",
-        "Tracker": "https://github.com/leahevy/template-python-with-setup/issues",
+        "Tracker": "https://github.com/leahevy/"
+        "template-python-with-setup/issues",
     },
-    description="A Python template project for a basic and reusable Python project layout with a setup.py file.",
+    description="A Python project template with a setup.py file.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     platforms="Linux, Mac OSX",
