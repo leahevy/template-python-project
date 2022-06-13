@@ -1,13 +1,13 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/leahevy/parsealot/master/img/parsealot.png" width="350px"/> 
+<img src="https://raw.githubusercontent.com/leahevy/template-python-with-setup/master/img/template-python-with-setup.png" width="350px"/> 
 </div>
 <br/>
 
 <p align="center">
-<b> Patched <u>typer</u> and <u>click</u> library for improved <u>argv</u> parsing.</b> 
+<b>Template repository for Python projects.</b> 
 </p>
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/leahevy/gitclone/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/leahevy/template-python-with-setup/graphs/commit-activity)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
@@ -16,11 +16,9 @@
 
 ---
 
-## Parse-A-Lot
+## Template
 
-**Parse-A-Lot** patches *typer* and *click* for improved defaults.
-
-Currently this is **not ready for use**.
+A template project.
 
 ---
 

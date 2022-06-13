@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+
 from setuptools import find_packages, setup
 
 os.chdir(os.path.dirname(__file__))
@@ -14,18 +15,18 @@ with open("README.md", "r") as f:
     long_description = f.read().strip()
 
 setup_info = dict(
-    name="parsealot",
+    name="template-python-with-setup",
     version="0.1",
     author="Leah Lackner",
     author_email="leah.lackner+github@gmail.com",
-    url="https://github.com/leahevy/parsealot",
+    url="https://github.com/leahevy/template-python-with-setup",
     project_urls={
-        "Documentation": "https://github.com/leahevy/parsealot"
+        "Documentation": "https://github.com/leahevy/template-python-with-setup"
         "/blob/master/README.md",
-        "Source": "https://github.com/leahevy/parsealot",
-        "Tracker": "https://github.com/leahevy/parsealot/issues",
+        "Source": "https://github.com/leahevy/template-python-with-setup",
+        "Tracker": "https://github.com/leahevy/template-python-with-setup/issues",
     },
-    description="Parse-A-Lot patches typer and click for improved defaults.",
+    description="Template for Python projects",
     long_description=long_description,
     long_description_content_type="text/markdown",
     platforms="Linux, Mac OSX",
@@ -43,7 +44,9 @@ setup_info = dict(
     ],
     zip_safe=True,
     entry_points={
-        "console_scripts": [],
+        "console_scripts": [
+            "template-python-with-setup=template_python_with_setup.main:main"
+        ],
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
