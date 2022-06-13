@@ -29,8 +29,8 @@ A Python project template with a setup.py file.
 
 ## Configure
 
-To configure the template for your project run `./configure.sh` and
-modify the *README.md* file and change the *./img/template-python-with-setup.png* image.
+To configure the template for your project run `./configure-template.sh`,
+modify the *README.md* file, and replace the *./img/template-python-with-setup.png* image.
 
 ## Features
 

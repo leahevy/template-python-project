@@ -68,28 +68,28 @@ xargs -n 2 mv || true
 
 # Replace words
 ###############
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,template-python-with-setup,$PYTHON_PROJECT_NAME,g" || true
 
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,template_python_with_setup,$PYTHON_PACKAGE_NAME,g" || true
 
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s#A Python project template with a setup.py file\.#$PYTHON_PACKAGE_DESCRIPTION#g" || true
 
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,Leah Lackner,$USER_NAME,g" || true
 
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,leahevy,$GITHUB_HANDLE,g" || true
 
 USER_MAIL="${USER_MAIL//@/\@}" 
 USER_MAIL="$(echo "$USER_MAIL" | tr '[:upper:]' '[:lower:]')"
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,leah\.lackner\+github\@gmail\.com,$USER_MAIL,g" || true
 
 CURRENT_YEAR="$(date +'%Y')"
-find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,Copyright \(C\)  2022,Copyright (C)  $CURRENT_YEAR,g" || true
 
-rm ./configure.sh
+rm ./configure-template.sh
