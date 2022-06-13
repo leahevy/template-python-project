@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/leahevy/template-python-with-setup/master/img/template-python-with-setup.png" width="350px"/> 
+<img src="https://raw.githubusercontent.com/leahevy/template-python-with-setup/master/assets/template-python-with-setup.png" width="350px"/> 
 </div>
 <br/>
 
@@ -30,7 +30,7 @@ A Python project template with a setup.py file.
 ## Configure
 
 To configure the template for your project run `./configure-template.sh`,
-modify the *README.md* file, and replace the *./img/template-python-with-setup.png* image.
+modify the *README.md* file, and replace the *./assets/template-python-with-setup.png* image.
 
 ## Features
 
