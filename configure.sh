@@ -87,3 +87,5 @@ USER_MAIL="${USER_MAIL//@/\@}"
 USER_MAIL="$(echo "$USER_MAIL" | tr '[:upper:]' '[:lower:]')"
 find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,leah\.lackner\+github\@gmail\.com,$USER_MAIL,g" || true
+
+rm ./configure.sh

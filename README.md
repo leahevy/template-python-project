@@ -27,8 +27,6 @@ A Python template project for a basic and reusable Python project layout with a 
 To configure the template for your project run `./configure.sh` and
 modify the *README.md* file and change the *./img/template-python-with-setup.png* image.
 
-Don't forget to delete the *./configure.sh* file afterwards.
-
 ## Features
 
 - Command with main function and typer.
