@@ -88,4 +88,8 @@ USER_MAIL="$(echo "$USER_MAIL" | tr '[:upper:]' '[:lower:]')"
 find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,leah\.lackner\+github\@gmail\.com,$USER_MAIL,g" || true
 
+CURRENT_YEAR="$(date +'%Y')"
+find . -type f -not -path "*configure.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+xargs -n 1 perl -pi -e "s,Copyright \(C\)  2022,Copyright (C)  $CURRENT_YEAR,g" || true
+
 rm ./configure.sh
