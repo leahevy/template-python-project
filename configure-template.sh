@@ -11,6 +11,14 @@ DEFAULT_GITHUB_HANDLE="leahevy"
 # Read user data
 ################
 echo "Provide the following information:"
+read -p "Python project name (required): " PYTHON_PROJECT_NAME
+if [ "${PYTHON_PROJECT_NAME}" = "" ]; then
+    echo "+ Project name required" 1>&2
+    exit 1
+fi
+PYTHON_PROJECT_NAME="${PYTHON_PROJECT_NAME//_/-}" 
+PYTHON_PROJECT_NAME="$(echo "$PYTHON_PROJECT_NAME" | tr '[:upper:]' '[:lower:]')"
+
 read -p "Your full name [$DEFAULT_USER_NAME]: " USER_NAME
 if [ "${USER_NAME}" = "" ]; then
     USER_NAME="$DEFAULT_USER_NAME"
@@ -26,14 +34,6 @@ if [ "${GITHUB_HANDLE}" = "" ]; then
     GITHUB_HANDLE="$DEFAULT_GITHUB_HANDLE"
 fi
 
-read -p "Python project name (required): " PYTHON_PROJECT_NAME
-if [ "${PYTHON_PROJECT_NAME}" = "" ]; then
-    echo "+ Project name required" 1>&2
-    exit 1
-fi
-PYTHON_PROJECT_NAME="${PYTHON_PROJECT_NAME//_/-}" 
-PYTHON_PROJECT_NAME="$(echo "$PYTHON_PROJECT_NAME" | tr '[:upper:]' '[:lower:]')"
-
 DEFAULT_PYTHON_PACKAGE_NAME="$PYTHON_PROJECT_NAME" 
 DEFAULT_PYTHON_PACKAGE_NAME="${DEFAULT_PYTHON_PACKAGE_NAME//-/_}" 
 DEFAULT_PYTHON_PACKAGE_NAME="$(echo "$DEFAULT_PYTHON_PACKAGE_NAME" | tr '[:upper:]' '[:lower:]')"
@@ -44,7 +44,11 @@ fi
 PYTHON_PACKAGE_NAME="${PYTHON_PACKAGE_NAME//-/_}" 
 PYTHON_PACKAGE_NAME="$(echo "$PYTHON_PACKAGE_NAME" | tr '[:upper:]' '[:lower:]')"
 
-read -p "Python package description (optional): " PYTHON_PACKAGE_DESCRIPTION
+DEFAULT_PYTHON_PACKAGE_DESCRIPTION="The $PYTHON_PROJECT_NAME package." 
+read -p "Python package description [$DEFAULT_PYTHON_PACKAGE_DESCRIPTION]: " PYTHON_PACKAGE_DESCRIPTION
+if [ "${PYTHON_PACKAGE_DESCRIPTION}" = "" ]; then
+    PYTHON_PACKAGE_DESCRIPTION="${DEFAULT_PYTHON_PACKAGE_DESCRIPTION}"
+fi
 
 
 # Rename folders and files
