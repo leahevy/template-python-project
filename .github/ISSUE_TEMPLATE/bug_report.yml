@@ -62,6 +62,14 @@ body:
       label: Relevant log output
       description: Please copy and paste any relevant log output.
       render: shell
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the bug report here
+      placeholder:
+    validations:
+      required: false
   - type: checkboxes
     id: terms
     attributes:
