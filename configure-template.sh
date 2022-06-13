@@ -103,7 +103,7 @@ find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -pat
 xargs -n 1 perl -pi -e "s,Copyright \(C\)  2022,Copyright (C)  $CURRENT_YEAR,g" || true
 
 find . -type f -not -path "*configure-template.sh" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
-xargs -n 1 perl -pi -e "s,\"tp\",$PYTHON_PACKAGE_SHORT_NAME,g" || true
+xargs -n 1 perl -pi -e "s,\"tp\",\"$PYTHON_PACKAGE_SHORT_NAME\",g" || true
 
 
 # Delete self
