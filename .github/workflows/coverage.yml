@@ -36,6 +36,7 @@ jobs:
         git fetch --all
         git switch -c coverage 
         git reset --hard
+        git pull || true
         cp /tmp/.coverage ./
         git checkout origin/master -- src
         git checkout origin/master -- tests
