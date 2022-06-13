@@ -1,9 +1,5 @@
 #!/usr/bin/env python
-import os
-
 from setuptools import find_packages, setup
-
-os.chdir(os.path.dirname(__file__))
 
 with open("requirements.txt", "r") as f:
     required_packages = f.read().strip().split()
