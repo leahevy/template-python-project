@@ -16,7 +16,7 @@ with open("README.md", "r") as f:
 
 setup_info = dict(
     name="template-python-with-setup",
-    version="0.0.1",
+    version="0.1.0",
     author="Leah Lackner",
     author_email="leah.lackner+github@gmail.com",
     url="https://github.com/leahevy/template-python-with-setup",
