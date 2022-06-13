@@ -11,6 +11,7 @@
 <a href="https://github.com/leahevy/template-python-with-setup/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/></a>
 <a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/build.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/build.yml/badge.svg"/></a>
 <a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/tests.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/tests.yml/badge.svg"/></a>
+<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/coverage.yml"><img src="https://raw.githubusercontent.com/leahevy/template-python-with-setup/coverage/coverage.svg"/></a>
 <a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/style.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/style.yml/badge.svg"/></a>
 <a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/format.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/format.yml/badge.svg"/></a>
 <a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/typechecks.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/typechecks.yml/badge.svg"/></a>
