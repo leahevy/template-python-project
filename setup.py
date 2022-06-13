@@ -26,7 +26,7 @@ setup_info = dict(
         "Source": "https://github.com/leahevy/template-python-with-setup",
         "Tracker": "https://github.com/leahevy/template-python-with-setup/issues",
     },
-    description="Template for Python projects",
+    description="A Python template project for a basic and reusable Python project layout with a setup.py file.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     platforms="Linux, Mac OSX",
