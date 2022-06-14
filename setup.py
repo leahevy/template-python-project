@@ -76,7 +76,7 @@ setup_info = dict(
     zip_safe=True,
     entry_points={
         "console_scripts": [
-            "template-python-project=template_python_project.main:run_main"
+            "template-python-project=template_python_project.cli:main"
         ],
     },
     package_dir={"": "."},
@@ -118,7 +118,7 @@ setup_info = dict(
             desc="Builds a source distribution",
         ),
         "upload_pypi_public": shellcommand(
-            "UploadPip",
+            "UploadPypiPublic",
             [
                 ["rm", "-rf", "dist"],
                 ["./.pre-commit.sh", "build"],
@@ -127,7 +127,7 @@ setup_info = dict(
             desc="Uploads the package to the official pypi repository",
         ),
         "upload_pypi_test": shellcommand(
-            "UploadPip",
+            "UploadPypiTest",
             [
                 ["rm", "-rf", "dist"],
                 ["./.pre-commit.sh", "build"],

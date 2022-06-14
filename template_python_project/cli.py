@@ -39,6 +39,9 @@ app = typer.Typer()
 
 
 def version_callback(value: bool) -> None:
+    """
+    Prints the version.
+    """
     if value:
         print(
             f"[green]{os.path.basename(sys.argv[0])}:[/green]"
@@ -64,7 +67,7 @@ def api2() -> None:
 
 
 @app.callback(invoke_without_command=True)
-def main(
+def main_callback(
     ctx: typer.Context,
     version: Optional[bool] = typer.Option(
         False,
@@ -85,9 +88,12 @@ def main(
         api1()
 
 
-def run_main() -> None:
+def main() -> None:
+    """
+    Runs the main application.
+    """
     app()
 
 
 if __name__ == "__main__":
-    run_main()
+    main()
