@@ -6,6 +6,19 @@ profile = "black"
 src_paths = ["template_python_project", "tests", "setup.py"]
 line_length = 79
 
+[tool.darker]
+line_length = 79
+src = [
+    "template_python_project",
+    "tests",
+    "setup.py"
+]
+revision = "master"
+diff = true
+check = true
+isort = true
+log_level = "INFO"
+
 [tool.mypy]
 python_version = "3.10"
 files = ["template_python_project/**/*.py", "tests/**/*.py", "setup.py"]
