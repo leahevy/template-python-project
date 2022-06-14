@@ -1,44 +1,51 @@
 name: Documentation
 
-# build the documentation whenever there are new commits on master
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# security: restrict permissions for CI jobs.
-permissions:
-  contents: read
-
 jobs:
-  # Build the documentation and upload the static HTML files as an artifact.
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python-version: "3.10"
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-
-      - run: pip install -e .[dev]
-      - run: pdoc -o docs template_python_project 
-
-      - run: tar --directory docs/ -hcf artifact.tar .
-      - uses: actions/upload-artifact@v3
-        with:
-          name: github-pages
-          path: ./artifact.tar
-  
-  # Deploy the artifact to GitHub pages.
-  # This is a separate job so that only actions/deploy-pages has the necessary permissions.
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v1
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .
+    - name: Install developer dependencies
+      run: |
+        pip install -e .[dev]
+    - name: Generate documentation
+      run: |
+        pdoc -o docs template_python_project
+    - name: Checkout documentation branch
+      run: |
+        mv docs /tmp/
+        git checkout --orphan documentation
+        git rm -r --cached .
+        git clean -fdx
+        mv /tmp/docs ./
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add docs
+        git commit -m "Updated documentation"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.github_token }}
+        branch: documentation
+        force: true
