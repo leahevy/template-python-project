@@ -7,23 +7,29 @@ cd "$(dirname "$0")"
 CMD="$1"
 
 format() {
+    echo "Running isort"
     isort --check .
+    echo "Running black"
     black --check .
 }
 
 style() {
+    echo "Running flake8"
     flake8 .
 }
 
 test() {
+    echo "Running pytest"
     pytest .
 }
 
 typechecks() {
+    echo "Running mypy"
     mypy .
 }
 
 build() {
+    echo "Building package"
     python setup.py sdist
 }
 

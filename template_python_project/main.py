@@ -18,20 +18,35 @@
 Some description comes here.
 """
 
+import os.path
+import sys
+
 import typer
 from rich import print
+
+from .__version__ import __version__
 
 app = typer.Typer()
 
 
 @app.command()
-def main_command() -> None:
+def main_command(
+    version: bool = typer.Option(
+        False, "-v", "--version", help="Print the version"
+    )
+) -> None:
     """
     Doctest test:
 
     >>> print("True")
     True
     """
+    if version:
+        print(
+            f"[green]{os.path.basename(sys.argv[0])}:[/green]"
+            f" [blue]v{__version__}[/blue]"
+        )
+        return None
     print("[green]Hello[/green] [yellow]World[/yellow][red]![/red]")
 
 

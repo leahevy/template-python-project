@@ -17,6 +17,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from typing import List
 
+from .__version__ import (
+    __major_version__,
+    __minor_version__,
+    __patch_version__,
+    __version__,
+)
+
 __author__ = "Leah Lackner"
 __contact__ = "leah.lackner+github@gmail.com"
 __copyright__ = "Copyright (C) 2022 Leah Lackner"
@@ -24,6 +31,5 @@ __deprecated__ = False
 __email__ = "leah.lackner+github@gmail.com"
 __license__ = "GPLv3"
 __maintainer__ = "Leah Lackner"
-__version__ = "0.3.0"
 
 __all__: List[str] = []
