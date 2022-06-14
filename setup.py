@@ -137,8 +137,13 @@ setup_info = dict(
         ),
         "pre_commit_checks": shellcommand(
             "PreCommit",
-            [["./.pre-commit.sh", "all"]],
+            [["./.pre-commit.sh", "on-commit"]],
             desc="Run all pre-commit checks",
+        ),
+        "all_checks": shellcommand(
+            "AllChecks",
+            [["./.pre-commit.sh", "all"]],
+            desc="Run all checks (including tests and build)",
         ),
     },
 )

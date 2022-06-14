@@ -35,6 +35,8 @@ The following custom **setup.py** commands are available:
   <dd>Uploads the package to the pypi test repository (testpypi)</dd>
   <dt><strong>pre_commit_checks</strong></dt>
   <dd>Run all pre-commit checks</dd>
+  <dt><strong>all_checks</strong></dt>
+  <dd>Run all checks (including tests and build)</dd>
 </dl>
 
 # How to Create Releases

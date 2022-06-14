@@ -49,10 +49,17 @@ case "$CMD" in
     build)
         build
         ;;
-    all)
+    on-commit)
         # Tests and build are not run on commit-hook,
         # since we only want to ensure that the code is
         # in good shape at this point.
+        format
+        style
+        typechecks
+        ;;
+    all)
+        test
+        build
         format
         style
         typechecks
