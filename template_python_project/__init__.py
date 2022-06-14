@@ -19,13 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from typing import List
 
-from .__version__ import (
+from template_python_project.__version__ import (
     __major_version__,
     __minor_version__,
     __patch_version__,
     __version__,
 )
-from .main import main
+from template_python_project.main import main
 
 __author__ = "Leah Lackner"
 __contact__ = "leah.lackner+github@gmail.com"

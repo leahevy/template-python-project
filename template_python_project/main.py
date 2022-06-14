@@ -20,20 +20,60 @@ Some description comes here.
 
 import os.path
 import sys
+from typing import Optional
 
 import typer
 from rich import print
 
-from .__version__ import __version__
+# Allow running the main python script without installing the package
+if __name__ == "__main__":
+    import os as _os
+    import sys as _sys
+
+    _sys.path.append(_os.path.join(_os.path.dirname(__file__), ".."))
+
+import template_python_project.api
+from template_python_project.__version__ import __version__
 
 app = typer.Typer()
 
 
+def version_callback(value: bool) -> None:
+    if value:
+        print(
+            f"[green]{os.path.basename(sys.argv[0])}:[/green]"
+            f" [blue]v{__version__}[/blue]"
+        )
+        raise typer.Exit()
+
+
 @app.command()
+def api1() -> None:
+    """
+    Calls an example API function.
+    """
+    template_python_project.api.some_api_func()
+
+
+@app.command()
+def api2() -> None:
+    """
+    Calls another API function.
+    """
+    template_python_project.api.other_api_func()
+
+
+@app.callback(invoke_without_command=True)
 def main(
-    version: bool = typer.Option(
-        False, "-v", "--version", help="Print the version"
-    )
+    ctx: typer.Context,
+    version: Optional[bool] = typer.Option(
+        False,
+        "-v",
+        "--version",
+        help="Prints the version",
+        callback=version_callback,
+        is_eager=True,
+    ),
 ) -> None:
     """
     Doctest test:
@@ -41,13 +81,8 @@ def main(
     >>> print("True")
     True
     """
-    if version:
-        print(
-            f"[green]{os.path.basename(sys.argv[0])}:[/green]"
-            f" [blue]v{__version__}[/blue]"
-        )
-        return None
-    print("[green]Hello[/green] [yellow]World[/yellow][red]![/red]")
+    if ctx.invoked_subcommand is None:
+        api1()
 
 
 def run_main() -> None:
