@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/leahevy/template-python-project/master/assets/template-python-project.png" width="350px"/> 
+<a href="https://github.com/leahevy/template-python-project"><img src="https://raw.githubusercontent.com/leahevy/template-python-project/master/assets/template-python-project.png" width="350px" alt="template-python-project"/></a>
 </div>
 <br/>
 
@@ -8,18 +8,18 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/leahevy/template-python-project/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/build.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/build.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/coverage.yml"><img src="https://raw.githubusercontent.com/leahevy/template-python-project/coverage/coverage.svg"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/style.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/style.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/format.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/format.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml/badge.svg"/></a>
-<a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg"/></a>
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg"/></a>
-<a href="https://www.linux.org/"><img src="https://svgshare.com/i/Zhy.svg"/></a>
-<a href="https://www.apple.com/"><img src="https://svgshare.com/i/ZjP.svg"/></a>
-<a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="This project is maintained"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/build.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/build.yml/badge.svg" alt="Build"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml/badge.svg" alt="Tests"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/coverage.yml"><img src="https://raw.githubusercontent.com/leahevy/template-python-project/coverage/coverage.svg" alt="Coverage"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/style.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/style.yml/badge.svg" alt="Coding style"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/format.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/format.yml/badge.svg" alt="Formatting checks"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml/badge.svg" alt="Typechecks"/></a>
+<a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPLv3"/></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python"/></a>
+<a href="https://www.linux.org/"><img src="https://svgshare.com/i/Zhy.svg" alt="Running on Linux"/></a>
+<a href="https://www.apple.com/"><img src="https://svgshare.com/i/ZjP.svg" alt="Running on MacOS"/></a>
+<a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Formatted with black"/></a>
 </p>
   
 ---
