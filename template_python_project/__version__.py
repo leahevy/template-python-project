@@ -13,13 +13,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import semantic_version  # type: ignore
+
 __version__ = "0.3.0"
 
-_version_split = __version__.split(".")
+_v = semantic_version.Version(__version__)
 
-__major_version__ = _version_split[0]
-__minor_version__ = _version_split[1]
-__patch_version__ = _version_split[2]
+__major_version__ = _v.major
+__minor_version__ = _v.minor
+__patch_version__ = _v.patch
 
 __all__ = [
     "__version__",
