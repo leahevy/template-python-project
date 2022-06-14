@@ -44,7 +44,7 @@ modify the *README.md* file, and replace the *./assets/template-python-project.p
 - *bumpversion* for version updating.
 - *editorconfig* file with defaults suitable to PEP expectations (e.g. line length: 79).
 - *dependabot* for dependency management.
-- *pre-commit* is ready to use (you could remove the **test** command from *pre-commit* by modifying *./.pre-commit.sh* if your pre-commit hook takes too long, but this may lead to a **failed** *test* badge in the Readme).
+- *pre-commit* is ready to use.
 - *CONTRIBUTING.md* template.
 
 ## Installation

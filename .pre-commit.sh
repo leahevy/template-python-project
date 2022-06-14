@@ -50,11 +50,12 @@ case "$CMD" in
         build
         ;;
     all)
+        # Tests and build are not run on commit-hook,
+        # since we only want to ensure that the code is
+        # in good shape at this point.
         format
         style
-        test
         typechecks
-        build
         ;;
     *)
         echo "Invalid command $CMD" >&2
