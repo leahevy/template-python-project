@@ -35,9 +35,17 @@ modify the *README.md* file, and replace the *./assets/template-python-with-setu
 
 ## Features
 
-- Command with main function and typer.
-- Testing with pytest with coverage and doctests.
-- Installation of package and optionally development dependencies.
+- Script (*./configure-template.sh*) to change the file/directory names and references from the template repository to your new repository.
+- Example command with main function and argument parsing using *typer*.
+- Testing with pytest with coverage report and evaluating doctests (a configurable package shortcut import is injected into the doctest namespace as well).
+- GitHub workflows for testing the *build*, *pytest*, *format*, *typechecks*, *style*, and generating a *coverage* svg on each push to **master**.
+- GitHub Issue templates and Code-of-Conduct using issue forms.
+- Configured toolchain including *flake8*, *mypy*, *pytest*, *black*, and *isort*.
+- *bumpversion* for version updating.
+- *editorconfig* file with defaults suitable to PEP expectations (e.g. line length: 79).
+- *dependabot* for dependency management.
+- *pre-commit* is ready to used (you could remove the **test** command from *pre-commit* by modifying *./.pre-commit.sh* if your pre-commit hook takes too long, but this may lead to a **failed** *test* badge in the Readme).
+- *CONTRIBUTING.md* template.
 
 ---
 
