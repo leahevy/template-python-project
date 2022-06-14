@@ -47,6 +47,12 @@ modify the *README.md* file, and replace the *./assets/template-python-project.p
 - *pre-commit* is ready to use (you could remove the **test** command from *pre-commit* by modifying *./.pre-commit.sh* if your pre-commit hook takes too long, but this may lead to a **failed** *test* badge in the Readme).
 - *CONTRIBUTING.md* template.
 
+## Installation
+
+To install this package locally for development clone it first using `git clone https://github.com/leahevy/template-python-project` and run: `pip install -e .[dev]`.
+
+For remote installation on your machine you can install it with pip directly from GitHub with the command: `pip install git+https://github.com/leahevy/template-python-project.git`.
+
 ---
 
 ## License
