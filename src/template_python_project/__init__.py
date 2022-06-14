@@ -1,6 +1,6 @@
-""" A Python project template with a setup.py file.
+""" A Python project template.
 
-Copyright (C)  2022 Leah Lackner
+Copyright (C) 2022 Leah Lackner
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@ from typing import List
 
 __author__ = "Leah Lackner"
 __contact__ = "leah.lackner+github@gmail.com"
-__copyright__ = "Copyright (C)  2022 Leah Lackner"
+__copyright__ = "Copyright (C) 2022 Leah Lackner"
 __deprecated__ = False
 __email__ = "leah.lackner+github@gmail.com"
 __license__ = "GPLv3"

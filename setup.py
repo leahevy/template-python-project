@@ -11,20 +11,20 @@ with open("README.md", "r") as f:
     long_description = f.read().strip()
 
 setup_info = dict(
-    name="template-python-with-setup",
+    name="template-python-project",
     version="0.2.0",
     author="Leah Lackner",
     author_email="leah.lackner+github@gmail.com",
-    url="https://github.com/leahevy/template-python-with-setup",
+    url="https://github.com/leahevy/template-python-project",
     project_urls={
         "Documentation": "https://github.com/leahevy/"
-        "template-python-with-setup"
+        "template-python-project"
         "/blob/master/README.md",
-        "Source": "https://github.com/leahevy/template-python-with-setup",
+        "Source": "https://github.com/leahevy/template-python-project",
         "Tracker": "https://github.com/leahevy/"
-        "template-python-with-setup/issues",
+        "template-python-project/issues",
     },
-    description="A Python project template with a setup.py file.",
+    description="A Python project template.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     platforms="Linux, Mac OSX",
@@ -43,7 +43,7 @@ setup_info = dict(
     zip_safe=True,
     entry_points={
         "console_scripts": [
-            "template-python-with-setup=template_python_with_setup.main:main"
+            "template-python-project=template_python_project.main:main"
         ],
     },
     package_dir={"": "src"},

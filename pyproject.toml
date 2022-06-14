@@ -25,7 +25,7 @@ no_implicit_reexport = true
 strict_equality = true
 
 [tool.pytest.ini_options]
-addopts = "--doctest-modules --cov-report html --cov=template_python_with_setup"
+addopts = "--doctest-modules --cov-report html --cov=template_python_project"
 testpaths = [
     "tests",
     "src",

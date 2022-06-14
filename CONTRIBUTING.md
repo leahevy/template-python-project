@@ -1,6 +1,6 @@
 # Contributing
 
-Want to add a contribution to **template-python-with-setup**? Feel free to send a [pull request](https://github.com/leahevy/template-python-with-setup/compare).
+Want to add a contribution to **template-python-project**? Feel free to send a [pull request](https://github.com/leahevy/template-python-project/compare).
 
 ---
 
@@ -32,7 +32,7 @@ After that a release should be published at *github.com/leahevy* named as *v1.0.
 
 ## See also
 
-**Full Changelog**: https://github.com/leahevy/template-python-with-setup/compare/v0.0.9...v1.0.0
+**Full Changelog**: https://github.com/leahevy/template-python-project/compare/v0.0.9...v1.0.0
 ```
 
 Create an account on https://pypi.org/account/register/

@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/leahevy/template-python-with-setup/master/assets/template-python-with-setup.png" width="350px"/> 
+<img src="https://raw.githubusercontent.com/leahevy/template-python-project/master/assets/template-python-project.png" width="350px"/> 
 </div>
 <br/>
 
@@ -8,13 +8,13 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/leahevy/template-python-with-setup/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/></a>
-<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/build.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/build.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/tests.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/tests.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/coverage.yml"><img src="https://raw.githubusercontent.com/leahevy/template-python-with-setup/coverage/coverage.svg"/></a>
-<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/style.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/style.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/format.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/format.yml/badge.svg"/></a>
-<a href="https://github.com/leahevy/template-python-with-setup/actions/workflows/typechecks.yml"><img src="https://github.com/leahevy/template-python-with-setup/actions/workflows/typechecks.yml/badge.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/build.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/build.yml/badge.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml/badge.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/coverage.yml"><img src="https://raw.githubusercontent.com/leahevy/template-python-project/coverage/coverage.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/style.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/style.yml/badge.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/format.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/format.yml/badge.svg"/></a>
+<a href="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml/badge.svg"/></a>
 <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg"/></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg"/></a>
 <a href="https://www.linux.org/"><img src="https://svgshare.com/i/Zhy.svg"/></a>
@@ -26,12 +26,12 @@
 
 ## Template
 
-A Python project template with a setup.py file.
+A Python project template.
 
 ## Configure
 
 To configure the template for your project run `./configure-template.sh`,
-modify the *README.md* file, and replace the *./assets/template-python-with-setup.png* image.
+modify the *README.md* file, and replace the *./assets/template-python-project.png* image.
 
 ## Features
 
@@ -51,7 +51,7 @@ modify the *README.md* file, and replace the *./assets/template-python-with-setu
 
 ## License
 
-Copyright (C)  2022 Leah Lackner
+Copyright (C) 2022 Leah Lackner
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
