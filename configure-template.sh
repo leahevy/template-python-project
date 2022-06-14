@@ -16,6 +16,7 @@ THIS_AUTHOR_EMAIL="leah.lackner+github@gmail.com"
 THIS_AUTHOR_GITHUB_HANDLE="leahevy"
 THIS_PROJECT_COPYRIGHT_YEAR="2022"
 THIS_DESCRIPTION="Template repository for Python projects\."
+THIS_PYTHON_VERSION="3.10"
 
 
 # DEFAULT VALUES
@@ -23,6 +24,7 @@ THIS_DESCRIPTION="Template repository for Python projects\."
 DEFAULT_USER_NAME="$THIS_AUTHOR"
 DEFAULT_USER_MAIL="$THIS_AUTHOR_EMAIL"
 DEFAULT_GITHUB_HANDLE="$THIS_AUTHOR_GITHUB_HANDLE"
+DEFAULT_PYTHON_VERSION="$THIS_PYTHON_VERSION"
 DEFAULT_VERSION="0.0.1"
 
 
@@ -36,6 +38,11 @@ if [ "${PYTHON_PROJECT_NAME}" = "" ]; then
 fi
 PYTHON_PROJECT_NAME="${PYTHON_PROJECT_NAME//_/-}" 
 PYTHON_PROJECT_NAME="$(echo "$PYTHON_PROJECT_NAME" | tr '[:upper:]' '[:lower:]')"
+
+read -p "Python version to support [$DEFAULT_PYTHON_VERSION]: " PYTHON_VERSION
+if [ "${PYTHON_VERSION}" = "" ]; then
+    PYTHON_VERSION="$DEFAULT_PYTHON_VERSION"
+fi
 
 read -p "Your full name [$DEFAULT_USER_NAME]: " USER_NAME
 if [ "${USER_NAME}" = "" ]; then
@@ -127,6 +134,10 @@ xargs -n 1 perl -pi -e "s,\"tp\",\"$PYTHON_PACKAGE_SHORT_NAME\",g" || true
 VERSION_QUOTED="$(echo "$VERSION" | tr '.' '\.' | tr '+' '\+')"
 find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$VERSION_QUOTED,$DEFAULT_VERSION,g" || true
+
+THIS_PYTHON_VERSION_QUOTED="$(echo "$THIS_PYTHON_VERSION" | tr '.' '\.' | tr '+' '\+')"
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+xargs -n 1 perl -pi -e "s,$THIS_PYTHON_VERSION_QUOTED,$PYTHON_VERSION,g" || true
 
 
 # Delete self
