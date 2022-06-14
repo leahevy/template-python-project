@@ -46,8 +46,8 @@ setup_info = dict(
             "template-python-project=template_python_project.main:main"
         ],
     },
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
+    package_dir={"": "."},
+    packages=find_packages(where="."),
     python_requires=">=3.10",
     install_requires=required_packages,
     extras_require={
