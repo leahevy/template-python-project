@@ -40,6 +40,7 @@ modify the *README.md* file, and replace the *./assets/template-python-project.p
 - Testing with pytest with coverage report and evaluating doctests (a configurable package shortcut import is injected into the doctest namespace as well).
 - GitHub workflows for testing the *build*, *pytest*, *format*, *typechecks*, *style*, and generating a *coverage* svg on each push to **master**.
 - GitHub Issue templates and Code-of-Conduct using issue forms.
+- Documentation generated and published on GitHub pages using **pdoc**.
 - Configured toolchain including *flake8*, *mypy*, *pytest*, *black*, and *isort*.
 - *bumpversion* for version updating.
 - *editorconfig* file with defaults suitable to PEP expectations (e.g. line length: 79).

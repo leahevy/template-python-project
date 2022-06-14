@@ -30,7 +30,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main_command(
+def main(
     version: bool = typer.Option(
         False, "-v", "--version", help="Print the version"
     )
@@ -50,9 +50,9 @@ def main_command(
     print("[green]Hello[/green] [yellow]World[/yellow][red]![/red]")
 
 
-def main() -> None:
+def run_main() -> None:
     app()
 
 
 if __name__ == "__main__":
-    main()
+    run_main()

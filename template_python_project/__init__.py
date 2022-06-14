@@ -14,6 +14,8 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+.. include:: ../README.md
 """
 from typing import List
 
@@ -23,6 +25,7 @@ from .__version__ import (
     __patch_version__,
     __version__,
 )
+from .main import main
 
 __author__ = "Leah Lackner"
 __contact__ = "leah.lackner+github@gmail.com"
@@ -32,4 +35,4 @@ __email__ = "leah.lackner+github@gmail.com"
 __license__ = "GPLv3"
 __maintainer__ = "Leah Lackner"
 
-__all__: List[str] = []
+__all__: List[str] = ["main"]

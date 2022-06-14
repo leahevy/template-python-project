@@ -76,7 +76,7 @@ setup_info = dict(
     zip_safe=True,
     entry_points={
         "console_scripts": [
-            "template-python-project=template_python_project.main:main"
+            "template-python-project=template_python_project.main:run_main"
         ],
     },
     package_dir={"": "."},
