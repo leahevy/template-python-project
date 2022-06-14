@@ -24,6 +24,6 @@ __deprecated__ = False
 __email__ = "leah.lackner+github@gmail.com"
 __license__ = "GPLv3"
 __maintainer__ = "Leah Lackner"
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__: List[str] = []
