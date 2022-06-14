@@ -103,40 +103,40 @@ xargs -n 2 mv || true
 
 # Replace words
 ###############
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$THIS_PROJECT_NAME,$PYTHON_PROJECT_NAME,g" || true
 
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$THIS_PACKAGE_NAME,$PYTHON_PACKAGE_NAME,g" || true
 
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s#$THIS_DESCRIPTION#$PYTHON_PACKAGE_DESCRIPTION#g" || true
 
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$THIS_AUTHOR,$USER_NAME,g" || true
 
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$THIS_AUTHOR_GITHUB_HANDLE,$GITHUB_HANDLE,g" || true
 
 USER_MAIL="${USER_MAIL//@/\@}" 
 USER_MAIL="$(echo "$USER_MAIL" | tr '[:upper:]' '[:lower:]')"
 THIS_AUTHOR_EMAIL_QUOTED="$(echo "$THIS_AUTHOR_EMAIL" | tr '.' '\.' | tr '+' '\+' | tr '@' '\@')"
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$THIS_AUTHOR_EMAIL_QUOTED,$USER_MAIL,g" || true
 
 CURRENT_YEAR="$(date +'%Y')"
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,Copyright \(C\) $THIS_PROJECT_COPYRIGHT_YEAR,Copyright (C) $CURRENT_YEAR,g" || true
 
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,\"tp\",\"$PYTHON_PACKAGE_SHORT_NAME\",g" || true
 
 VERSION_QUOTED="$(echo "$VERSION" | tr '.' '\.' | tr '+' '\+')"
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$VERSION_QUOTED,$DEFAULT_VERSION,g" || true
 
 THIS_PYTHON_VERSION_QUOTED="$(echo "$THIS_PYTHON_VERSION" | tr '.' '\.' | tr '+' '\+')"
-find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
+find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" |
 xargs -n 1 perl -pi -e "s,$THIS_PYTHON_VERSION_QUOTED,$PYTHON_VERSION,g" || true
 
 
