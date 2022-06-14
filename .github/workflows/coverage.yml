@@ -33,13 +33,13 @@ jobs:
     - name: Checkout coverage branch
       run: |
         cp .coverage /tmp/
-        git fetch --all
-        git switch -c coverage || git checkout coverage
-        git reset --hard
-        git pull || true
+        git checkout --orphan coverage
+        git rm -r --cached .
+        git clean -fdx
         cp /tmp/.coverage ./
         git checkout origin/master -- template_python_project
         git checkout origin/master -- tests
+        git rm -r --cached .
     - name: Coverage Badge
       uses: tj-actions/coverage-badge-py@v1.8
     - name: Commit files
