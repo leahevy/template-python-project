@@ -12,6 +12,31 @@ After that you can install the development dependencies with `pip install -e .[d
 
 It is recommended to install the provided **pre-commit** hook before making any changes: `pre-commit install`.
 
+# Setup commands
+
+The following custom **setup.py** commands are available:
+
+<dl>
+  <dt><strong>format</strong></dt>
+  <dd>Re-formats the code (isort+black)</dd>
+  <dt><strong>check_format</strong></dt>
+  <dd>Checks the formatting (isort+black)</dd>
+  <dt><strong>check_style</strong></dt>
+  <dd>Checks the coding style (flake8)</dd>
+  <dt><strong>test</strong></dt>
+  <dd>Run all tests (pytest)</dd>
+  <dt><strong>typechecks</strong></dt>
+  <dd>Checks whether all typechecks pass (mypy)</dd>
+  <dt><strong>run_build</strong></dt>
+  <dd>Builds a source distribution</dd>
+  <dt><strong>upload_pypi_public</strong></dt>
+  <dd>Uploads the package to the official pypi repository</dd>
+  <dt><strong>upload_pypi_test</strong></dt>
+  <dd>Uploads the package to the pypi test repository (testpypi)</dd>
+  <dt><strong>pre_commit_checks</strong></dt>
+  <dd>Run all pre-commit checks</dd>
+</dl>
+
 # How to Create Releases
 
 A release commit should advance the version.
@@ -53,3 +78,5 @@ rm -rf dist
 python setup.py sdist
 twine upload dist/*
 ```
+
+You can also just use the provided **setup.py** commands: `./setup.py upload_pypi_test` (*testpypi* repository) and `./setup.py upload_pypi_public` (default *pypi* repository).

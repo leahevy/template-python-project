@@ -97,7 +97,7 @@ setup_info = dict(
             [["./.pre-commit.sh", "format"]],
             desc="Checks the formatting (isort+black)",
         ),
-        "style": shellcommand(
+        "check_style": shellcommand(
             "Style",
             [["./.pre-commit.sh", "style"]],
             desc="Checks the coding style (flake8)",
@@ -117,7 +117,25 @@ setup_info = dict(
             [["rm", "-rf", "dist"], ["./.pre-commit.sh", "build"]],
             desc="Builds a source distribution",
         ),
-        "pre_commit": shellcommand(
+        "upload_pypi_public": shellcommand(
+            "UploadPip",
+            [
+                ["rm", "-rf", "dist"],
+                ["./.pre-commit.sh", "build"],
+                ["bash", "-c", "twine upload dist/*"],
+            ],
+            desc="Uploads the package to the official pypi repository",
+        ),
+        "upload_pypi_test": shellcommand(
+            "UploadPip",
+            [
+                ["rm", "-rf", "dist"],
+                ["./.pre-commit.sh", "build"],
+                ["bash", "-c", "twine upload --repository testpypi dist/*"],
+            ],
+            desc="Uploads the package to the pypi test repository (testpypi)",
+        ),
+        "pre_commit_checks": shellcommand(
             "PreCommit",
             [["./.pre-commit.sh", "all"]],
             desc="Run all pre-commit checks",
