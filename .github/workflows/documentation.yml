@@ -29,7 +29,7 @@ jobs:
         pip install -e .[dev]
     - name: Generate documentation
       run: |
-        pdoc -o docs template_python_project
+        pdoc -o docs --math template_python_project
     - name: Checkout documentation branch
       run: |
         mv docs /tmp/
