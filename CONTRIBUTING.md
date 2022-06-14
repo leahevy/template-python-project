@@ -4,6 +4,14 @@ Want to add a contribution to **template-python-project**? Feel free to send a [
 
 ---
 
+# Setup development environment
+
+To setup your development environment it is recommended to setup some kind of virtual Python environment such as [pyenv](https://github.com/pyenv/pyenv) with [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
+
+After that you can install the development dependencies with `pip install -e .[dev]`.
+
+It is recommended to install the provided **pre-commit** hook before making any changes: `pre-commit install`.
+
 # How to Create Releases
 
 A release commit should advance the version.
