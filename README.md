@@ -86,6 +86,14 @@ The documentation is available at <https://leahevy.github.io/template-python-pro
 
 ---
 
+## Contributing
+
+Want to add a contribution to **template-python-project**? Feel free to send a [pull request](https://github.com/leahevy/template-python-project/compare).
+
+See also [here](https://github.com/leahevy/template-python-project/blob/master/CONTRIBUTING.md).
+
+---
+
 ## 🎓 License
 
 Copyright (C) 2022 Leah Lackner
