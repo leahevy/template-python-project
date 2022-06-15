@@ -25,7 +25,7 @@
   
 ---
 
-## 💫 Template Python Project
+## 💫 [Template Python Project](https://github.com/leahevy/template-python-project)
 
 A Python project template.
 
