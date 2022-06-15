@@ -62,9 +62,13 @@ modify the *README.md* file, and replace the *./assets/template-python-project.p
 
 ## 💿 Installation
 
-To install this package locally for development clone it first using `git clone https://github.com/leahevy/template-python-project` and run: `pip install -e .[dev]`.
+To install it with pip run: `pip install template-python-project`.
 
-For remote installation on your machine you can install it with pip directly from GitHub with the command: `pip install git+https://github.com/leahevy/template-python-project.git`.
+> This template is actually not uploaded to pip. This is just for information purposes.
+
+To install this package locally for development, clone it first using `git clone https://github.com/leahevy/template-python-project` and run: `pip install -e .[dev]`.
+
+For installation of the latest version you can install it with pip directly from *GitHub* with the command: `pip install git+https://github.com/leahevy/template-python-project.git`.
 
 ---
 
