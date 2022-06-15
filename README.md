@@ -38,7 +38,7 @@ This is a fully configured project template for Python with features like API do
 ## ✍️ Configure
 
 To configure the template for your project run `./configure-template.sh`,
-modify the *README.md* file, and replace the *./assets/template-python-project.png* image.
+modify the *README.md* file, and replace the *./assets/template-python-project.png* logo (the logo is generated with a script of mine, provided [here](https://github.com/leahevy/dev/blob/master/python/leahevy/cmds/gen_project_banner.py).
 
 ---
 
