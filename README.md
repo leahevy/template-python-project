@@ -31,6 +31,8 @@ A Python project template.
 
 This is a fully configured project template for Python with features like API documentation generation using **pdoc** and a full set of *GitHub* workflows which will run on each push to test and check the code, generate test coverage badges, etc.
 
+[The source for this project is available here.](https://github.com/leahevy/template-python-project)
+
 ---
 
 ## ✍️ Configure
