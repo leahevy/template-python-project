@@ -54,6 +54,17 @@ To install this package locally for development clone it first using `git clone 
 
 For remote installation on your machine you can install it with pip directly from GitHub with the command: `pip install git+https://github.com/leahevy/template-python-project.git`.
 
+## Commands
+
+The following commands are available:
+
+<dl>
+  <dt><strong>api1</strong></dt>
+  <dd>Calls an example API function.</dd>
+  <dt><strong>api2</strong></dt>
+  <dd>Calls another API function.</dd>
+</dl>
+
 ## Documentation
 
 The documentation is available at <https://leahevy.github.io/template-python-project>.
