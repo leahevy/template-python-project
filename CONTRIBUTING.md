@@ -1,18 +1,19 @@
-# Contributing
+# 👥 Contributing
 
 Want to add a contribution to **template-python-project**? Feel free to send a [pull request](https://github.com/leahevy/template-python-project/compare).
 
 ---
 
-# Setup development environment
+## 💿 Setup development environment
 
 To setup your development environment it is recommended to setup some kind of virtual Python environment such as [pyenv](https://github.com/pyenv/pyenv) with [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
 
 After that you can install the development dependencies with `pip install -e .[dev]`.
 
 It is recommended to install the provided **pre-commit** hook before making any changes: `pre-commit install`.
+---
 
-# Setup commands
+## ⌨️ Setup commands
 
 The following custom **setup.py** commands are available:
 
@@ -39,7 +40,9 @@ The following custom **setup.py** commands are available:
   <dd>Run all checks (including tests and build)</dd>
 </dl>
 
-# How to Create Releases
+---
+
+## ☁️ How to Create Releases
 
 A release commit should advance the version.
 
@@ -53,24 +56,28 @@ git push --tags
 After that a release should be published at *github.com/leahevy* named as *v1.0.0* with a description describing the new features and fixes, e.g.:
 
 ```markdown
-# Version 1.0.0
+# ↑ Version 1.0.0
 
-## New features
+## ✨ New features
 
 - Some change
 - Another change
 
-## Bugfixes
+## 🐞 Bugfixes
 
 - Some fix
 - Another fix
 
-## See also
+## 🌍 See also
 
-**Full Changelog**: https://github.com/leahevy/template-python-project/compare/v0.0.9...v1.0.0
+**Full Changelog**: <https://github.com/leahevy/template-python-project/compare/v0.0.9...v1.0.0>
 ```
 
-Create an account on https://pypi.org/account/register/
+---
+
+## 🏷 How to Create Releases
+
+Create an account on <https://pypi.org/account/register/>
 
 The package can be build and uploaded with:
 

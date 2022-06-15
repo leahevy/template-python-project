@@ -4,7 +4,7 @@
 <br/>
 
 <p align="center">
-<b>Template repository for Python projects.</b> 
+<b>✨ Template repository for Python projects. ✨</b> 
 </p>
 
 <p align="center">
@@ -24,16 +24,22 @@
   
 ---
 
-## Template
+## 💫 Python Project Template
 
 A Python project template.
 
-## Configure
+This is a fully configured project template for Python with features like API documentation generation using **pdoc** and a full set of *GitHub* workflows which will run on each push to test and check the code, generate test coverage badges, etc.
+
+---
+
+## ✍️ Configure
 
 To configure the template for your project run `./configure-template.sh`,
 modify the *README.md* file, and replace the *./assets/template-python-project.png* image.
 
-## Features
+---
+
+## ✨ Features
 
 - Script (*./configure-template.sh*) to change the file/directory names and references from the template repository to your new repository.
 - Example command with main function and argument parsing using *typer*.
@@ -48,13 +54,17 @@ modify the *README.md* file, and replace the *./assets/template-python-project.p
 - *pre-commit* is ready to use.
 - *CONTRIBUTING.md* template.
 
-## Installation
+---
+
+## 💿 Installation
 
 To install this package locally for development clone it first using `git clone https://github.com/leahevy/template-python-project` and run: `pip install -e .[dev]`.
 
 For remote installation on your machine you can install it with pip directly from GitHub with the command: `pip install git+https://github.com/leahevy/template-python-project.git`.
 
-## Commands
+---
+
+## ⌨️ Commands
 
 The following commands are available:
 
@@ -65,7 +75,9 @@ The following commands are available:
   <dd>Calls another API function.</dd>
 </dl>
 
-## Documentation
+---
+
+## 📖 Documentation
 
 The documentation is available at <https://leahevy.github.io/template-python-project>.
 
@@ -73,7 +85,7 @@ The documentation is available at <https://leahevy.github.io/template-python-pro
 
 ---
 
-## License
+## 🎓 License
 
 Copyright (C) 2022 Leah Lackner
 
