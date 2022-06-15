@@ -20,6 +20,7 @@
 <a href="https://www.linux.org/"><img src="https://svgshare.com/i/Zhy.svg" alt="Running on Linux"/></a>
 <a href="https://www.apple.com/"><img src="https://svgshare.com/i/ZjP.svg" alt="Running on MacOS"/></a>
 <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Formatted with black"/></a>
+<a href="https://opensource.fb.com/support-ukraine"><img src="https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB" alt="Support Ukraine"/></a>
 </p>
   
 ---
