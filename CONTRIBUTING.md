@@ -11,6 +11,7 @@ To setup your development environment it is recommended to setup some kind of vi
 After that you can install the development dependencies with `pip install -e .[dev]`.
 
 It is recommended to install the provided **pre-commit** hook before making any changes: `pre-commit install`.
+
 ---
 
 ## ⌨️ Setup commands
@@ -56,7 +57,7 @@ git push --tags
 After that a release should be published at *github.com/leahevy* named as *v1.0.0* with a description describing the new features and fixes, e.g.:
 
 ```markdown
-# ↑ Version 1.0.0
+# 🟢 Version 1.0.0
 
 ## ✨ New features
 
