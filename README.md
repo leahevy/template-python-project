@@ -25,7 +25,7 @@
   
 ---
 
-## 💫 Python Project Template
+## 💫 Template Python Project
 
 A Python project template.
 
