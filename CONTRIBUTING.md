@@ -30,7 +30,7 @@ The following custom **setup.py** commands are available:
   <dt><strong>typechecks</strong></dt>
   <dd>Checks whether all typechecks pass (mypy)</dd>
   <dt><strong>run_build</strong></dt>
-  <dd>Builds a source distribution</dd>
+  <dd>Builds the package</dd>
   <dt><strong>upload_pypi_public</strong></dt>
   <dd>Uploads the package to the official pypi repository</dd>
   <dt><strong>upload_pypi_test</strong></dt>

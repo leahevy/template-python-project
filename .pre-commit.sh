@@ -30,7 +30,8 @@ typechecks() {
 
 build() {
     echo "Building package"
-    python setup.py sdist
+    rm -rf dist
+    python -m build .
 }
 
 case "$CMD" in

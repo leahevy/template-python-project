@@ -29,7 +29,8 @@ jobs:
       run: |
         pip install -e .[dev]
     - name: Build
-      run: python -m build .
+      run: |
+        ./.pre-commit.sh build
     - name: Publish
       if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@master

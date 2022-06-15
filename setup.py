@@ -131,7 +131,7 @@ setup_info = dict(
         "run_build": shellcommand(
             "Build",
             [["rm", "-rf", "dist"], ["./.pre-commit.sh", "build"]],
-            desc="Builds a source distribution",
+            desc="Builds the package",
         ),
         "upload_pypi_public": shellcommand(
             "UploadPypiPublic",
