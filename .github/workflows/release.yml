@@ -1,0 +1,39 @@
+name: Release
+
+# Disabled workflow in template. 
+# To enable, exchange the commented blocks.
+# on:
+#   push:
+#     branches:
+#       - master
+on:
+  push:
+    branches-ignore:
+      - '**'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: "3.10"
+    - name: Install dependencies and packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .
+    - name: Install developer dependencies
+      run: |
+        pip install -e .[dev]
+    - name: Build
+      run: python -m build .
+    - name: Publish
+      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_api_token }}
+        skip_existing: true

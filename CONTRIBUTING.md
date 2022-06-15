@@ -80,13 +80,6 @@ After that a release should be published at *github.com/leahevy* named as *v1.0.
 
 Create an account on <https://pypi.org/account/register/>
 
-The package can be build and uploaded with:
+Use the provided **setup.py** commands to upload the package: `./setup.py upload_pypi_test` (*testpypi* repository) and `./setup.py upload_pypi_public` (default *pypi* repository).
 
-```bash
-pip install -r requirements-dev.txt
-rm -rf dist
-python setup.py sdist
-twine upload dist/*
-```
-
-You can also just use the provided **setup.py** commands: `./setup.py upload_pypi_test` (*testpypi* repository) and `./setup.py upload_pypi_public` (default *pypi* repository).
+You can also activate the automatic release workflow at **./.github/workflows/release.yml**.
