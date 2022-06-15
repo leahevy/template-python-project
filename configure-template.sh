@@ -8,7 +8,7 @@ SCRIPT_NAME="$(basename "$0")"
 
 # VALUES OF THIS TEMPLATE PROJECT
 #################################
-VERSION="0.11.0"
+VERSION="0.12.0"
 THIS_PROJECT_NAME="template-python-project"
 THIS_PACKAGE_NAME="${THIS_PROJECT_NAME//-/_}" 
 THIS_AUTHOR="Leah Lackner"

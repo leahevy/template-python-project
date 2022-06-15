@@ -45,7 +45,7 @@ with open("README.md", "r") as f:
 
 setup_info = dict(
     name="template-python-project",
-    version="0.11.0",
+    version="0.12.0",
     author="Leah Lackner",
     author_email="leah.lackner+github@gmail.com",
     url="https://github.com/leahevy/template-python-project",
