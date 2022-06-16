@@ -18,6 +18,9 @@ PACKAGE_NAME := $(subst -,_,$(PROJECT_NAME))
 
 FILES = ./$(PACKAGE_NAME) ./tests ./setup.py
 
+WORKDIR_CLEAN = @git diff --quiet --exit-code || { echo "Workdir not clean"; exit 1; } && \
+					git diff --cached --quiet --exit-code || { echo "Uncommited staged changes"; exit 1; }
+
 .PHONY: all
 all: help
 
@@ -128,18 +131,44 @@ all-checks: ## Runs all checks (format, types, style, build, test)
 .PHONY: run-all-checks
 run-all-checks: check-format check-types check-style build test
 
+.PHONY: prepare-release
+prepare-release:
+	$(WORKDIR_CLEAN)
+	gitchangelog > CHANGELOG.md
+	git add CHANGELOG.md
+
 .PHONY: bump-major
 bump-major: ## Bumps the major version (tagged)
+	$(MAKE) run-bump-major
+
+.PHONY: run-bump-major
+run-bump-major: prepare-release
+	$(WORKDIR_CLEAN)
 	bump2version major --tag
 
 .PHONY: bump-minor
 bump-minor: ## Bumps the minor version (tagged)
+	$(MAKE) run-bump-minor
+
+.PHONY: run-bump-minor
+run-bump-minor: prepare-release
+	$(WORKDIR_CLEAN)
 	bump2version minor --tag
 
 .PHONY: bump-patch
 bump-patch: ## Bumps the patch version (untagged)
+	$(MAKE) run-bump-patch
+
+.PHONY: run-bump-patch
+run-bump-patch:
+	$(WORKDIR_CLEAN)
 	bump2version patch
 
 .PHONY: bump-patch-tagged
 bump-patch-tagged: ## Bumps the patch version (tagged)
+	$(MAKE) run-bump-patch-tagged
+
+.PHONY: run-bump-patch-tagged
+run-bump-patch-tagged: prepare-release
+	$(WORKDIR_CLEAN)
 	bump2version patch --tag
