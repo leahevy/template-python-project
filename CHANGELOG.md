@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+v0.30.2 (2022-06-16)
+--------------------
+- Fix configure script (2) [Leah Lackner]
+- Fix configure script. [Leah Lackner]
+
+
 v0.30.1 (2022-06-16)
 --------------------
 - Remove old line in readme. [Leah Lackner]
