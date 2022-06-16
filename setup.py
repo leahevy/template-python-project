@@ -15,19 +15,21 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import pty
-import sys
+from setuptools import find_packages, setup
 
-from setuptools import Command, find_packages, setup
 
-with open("requirements.txt", "r") as f:
-    required_packages = f.read().strip().split()
+def read_file(file: str) -> str:
+    with open(file, "r") as f:
+        return f.read().strip()
 
-with open("requirements-dev.txt", "r") as f:
-    required_dev_packages = f.read().strip().split()
 
-with open("README.md", "r") as f:
-    long_description = f.read().strip()
+def read_requirements(file: str) -> list[str]:
+    return [
+        line.strip()
+        for line in read_file(file).split("\n")
+        if not line.startswith("#") and line.strip()
+    ]
+
 
 setup_info = dict(
     name="template-python-project",
@@ -44,7 +46,7 @@ setup_info = dict(
         "template-python-project/issues",
     },
     description="A Python project template.",
-    long_description=long_description,
+    long_description=read_file("README.md"),
     long_description_content_type="text/markdown",
     platforms="Linux, Mac OSX",
     license="GPLv3",
@@ -68,9 +70,9 @@ setup_info = dict(
     package_dir={"": "."},
     packages=find_packages(where="."),
     python_requires=">=3.10",
-    install_requires=required_packages,
+    install_requires=read_requirements("requirements.txt"),
     extras_require={
-        "dev": required_dev_packages,
+        "dev": read_requirements("requirements-dev.txt"),
     },
     cmdclass={},
 )
