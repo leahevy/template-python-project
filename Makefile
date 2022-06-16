@@ -71,6 +71,7 @@ check-types: ## Checks the types (typechecks)
 .PHONY: test
 test: ## Runs the unittests and doctests
 	pytest $(subst ./setup.py,,$(FILES))
+	coverage html
 	@echo
 
 .PHONY: build
