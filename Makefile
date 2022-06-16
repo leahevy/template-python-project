@@ -40,6 +40,10 @@ install-dev: ## Installs the package with '-e' for local development
 	pip install -e .[dev]
 	pre-commit install
 
+.PHONY: install-dev-noprecommit
+install-dev-noprecommit:
+	pip install -e .[dev]
+
 .PHONY: format
 format: ## Formats the code
 	isort $(FILES)
