@@ -159,6 +159,12 @@ black -l 79 . || true
 isort -l 79 . || true
 
 
+# Exchange Readmes
+#############
+rm -f ./README.md
+mv ./README-template.md ./README.md || true
+
+
 # Delete self
 #############
 rm -f "./$SCRIPT_NAME"
