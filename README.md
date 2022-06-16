@@ -9,12 +9,6 @@
 
 <p align="center">
 <a href="https://github.com/leahevy/template-python-project/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="This project is maintained"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/build.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/build.yml/badge.svg" alt="Build"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/tests.yml/badge.svg" alt="Tests"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/coverage.yml"><img src="https://raw.githubusercontent.com/leahevy/template-python-project/coverage/coverage.svg" alt="Coverage"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/style.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/style.yml/badge.svg" alt="Coding style"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/format.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/format.yml/badge.svg" alt="Formatting checks"/></a>
-<a href="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml"><img src="https://github.com/leahevy/template-python-project/actions/workflows/typechecks.yml/badge.svg" alt="Typechecks"/></a>
 <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPLv3"/></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python"/></a>
 <a href="https://www.linux.org/"><img src="https://svgshare.com/i/Zhy.svg" alt="Running on Linux"/></a>
@@ -60,36 +54,9 @@ modify the *README.md* file, and replace the *./assets/template-python-project.p
 
 ---
 
-## 💿 Installation
-
-To install it with pip run: `pip install template-python-project`.
-
-> This template is actually not uploaded to pip. This is just for information purposes.
-
-To install this package locally for development, clone it first using `git clone https://github.com/leahevy/template-python-project` and run: `pip install -e .[dev]`.
-
-For installation of the latest version you can install it with pip directly from *GitHub* with the command: `pip install git+https://github.com/leahevy/template-python-project.git`.
-
----
-
-## ⌨️ Commands
-
-The following commands are available:
-
-<dl>
-  <dt><strong>api1</strong></dt>
-  <dd>Calls an example API function.</dd>
-  <dt><strong>api2</strong></dt>
-  <dd>Calls another API function.</dd>
-</dl>
-
----
-
 ## 📖 Documentation
 
-The documentation is available at <https://leahevy.github.io/template-python-project>.
-
-> To setup the documentation page, just push to your repository and wait for the *documentation* workflow to finish. After that, setup [GitHub-Pages](https://github.com/leahevy/template-python-project/settings/pages) by setting the branch to **documentation** and the directory to **docs**. Optionally check the **Enforce HTTPS** checkbox.
+To setup the documentation page, just push to your repository and wait for the *documentation* workflow to finish. After that, setup [GitHub-Pages](https://github.com/leahevy/template-python-project/settings/pages) by setting the branch to **documentation** and the directory to **docs**. Optionally check the **Enforce HTTPS** checkbox.
 
 ---
 

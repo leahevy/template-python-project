@@ -29,42 +29,15 @@
 
 A Python project template.
 
-This is a fully configured project template for Python with features like API documentation generation using **pdoc** and a full set of *GitHub* workflows which will run on each push to test and check the code, generate test coverage badges, etc.
+Some description comes here.
 
 [The source for this project is available here.](https://github.com/leahevy/template-python-project)
-
----
-
-## ✍️ Configure
-
-To configure the template for your project run `./configure-template.sh`,
-modify the *README.md* file, and replace the *./assets/template-python-project.png* logo (the logo is generated with a script of mine, provided [here](https://github.com/leahevy/dev/blob/master/python/leahevy/cmds/gen_project_banner.py)).
-
----
-
-## ✨ Features
-
-- Script (*./configure-template.sh*) to change the file/directory names and references from the template repository to your new repository.
-- Example command with main function and argument parsing using *typer*.
-- Testing with pytest with coverage report and evaluating doctests (a configurable package shortcut import is injected into the doctest namespace as well).
-- GitHub workflows for testing the *build*, *pytest*, *format*, *typechecks*, *style*, and generating a *coverage* svg on each push to **master**.
-- GitHub workflow for automatic **pypa** publishing (disabled per default).
-- GitHub Issue templates and Code-of-Conduct using issue forms.
-- Documentation generated and published on GitHub pages using **pdoc**.
-- Configured toolchain including *flake8*, *mypy*, *pytest*, *black*, and *isort*.
-- *bumpversion* for version updating.
-- *editorconfig* file with defaults suitable to PEP expectations (e.g. line length: 79).
-- *dependabot* for dependency management.
-- *pre-commit* is ready to use.
-- *CONTRIBUTING.md* template.
 
 ---
 
 ## 💿 Installation
 
 To install it with pip run: `pip install template-python-project`.
-
-> This template is actually not uploaded to pip. This is just for information purposes.
 
 To install this package locally for development, clone it first using `git clone https://github.com/leahevy/template-python-project` and run: `pip install -e .[dev]`.
 
@@ -88,8 +61,6 @@ The following commands are available:
 ## 📖 Documentation
 
 The documentation is available at <https://leahevy.github.io/template-python-project>.
-
-> To setup the documentation page, just push to your repository and wait for the *documentation* workflow to finish. After that, setup [GitHub-Pages](https://github.com/leahevy/template-python-project/settings/pages) by setting the branch to **documentation** and the directory to **docs**. Optionally check the **Enforce HTTPS** checkbox.
 
 ---
 
@@ -117,4 +88,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
