@@ -77,6 +77,7 @@ build: ## Builds the package
 
 .PHONY: clean
 clean: ## Cleans the working directory
+	@git clean -fdX
 
 .PHONY: make-docs
 make-docs: ## Generates the documentation
@@ -127,3 +128,7 @@ bump-minor: ## Bumps the minor version (tagged)
 .PHONY: bump-patch
 bump-patch: ## Bumps the patch version (untagged)
 	bump2version patch
+
+.PHONY: bump-patch-tagged
+bump-patch-tagged: ## Bumps the patch version (tagged)
+	bump2version patch --tag
