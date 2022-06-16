@@ -109,13 +109,13 @@ titlecase() {
 
 replace-words() {
     printf "${GREEN}Replace words ('$1' -> '$2')...${ENDCOLOR}\n"
-    find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" | xargs -n 1 perl -pi -e "s,$1,$2,g" || true
+    find . -type f -not -path "*$SCRIPT_NAME" -not -path "*.venv/*" -not -path "*.git/*" -not -path "*__pycache__*" -not -path "*.egg-info*" -not -path "*.png" | xargs -n 1 perl -pi -e "s,$1,$2,g" || true
 }
 
 rename-files() {
     printf "${GREEN}Rename files and folders ('$1' -> '$2')...${ENDCOLOR}\n"
-    find . -type d -not -path "*__pycache__*" -not -path "*.egg-info*" | grep "$1" | sed -n "s/\(.*\)$1\(.*\)/& \1$2\2/p" | xargs -n 2 mv || true
-    find . -type f -not -path "*__pycache__*" -not -path "*.egg-info*" | grep "$1" | sed -n "s/\(.*\)$1\(.*\)/& \1$2\2/p" | xargs -n 2 mv || true
+    find . -type d -not -path "*__pycache__*" -not -path "*.venv/*" -not -path "*.egg-info*" | grep "$1" | sed -n "s/\(.*\)$1\(.*\)/& \1$2\2/p" | xargs -n 2 mv || true
+    find . -type f -not -path "*__pycache__*" -not -path "*.venv/*" -not -path "*.egg-info*" | grep "$1" | sed -n "s/\(.*\)$1\(.*\)/& \1$2\2/p" | xargs -n 2 mv || true
 }
 
 # Process variables
