@@ -2,8 +2,9 @@ Changelog
 =========
 
 
-(unreleased)
-------------
+v0.27.0 (2022-06-16)
+--------------------
+- [fix] Makefile. [Leah Lackner]
 - Configure gitchangelog. [Leah Lackner]
 - Add gitchangelog.rc. [Leah Lackner]
 - [wip] use gitchangelog for releases. [Leah Lackner]
@@ -17,46 +18,32 @@ Changelog
 
 v0.26.0 (2022-06-16)
 --------------------
-- Bump version: 0.25.0 → 0.26.0. [Leah Lackner]
 - No pre-commit install in workflows. [Leah Lackner]
 - Makefile commands. [Leah Lackner]
 
 
 v0.25.0 (2022-06-16)
 --------------------
-- Bump version: 0.24.0 → 0.25.0. [Leah Lackner]
 - Move commands from setup.py and .pre-commit.sh to Makefile. [Leah
   Lackner]
 - Rewrite headlines. [Leah Lackner]
 - Add usage info to readme. [Leah Lackner]
 - Rewrite readmes. [Leah Lackner]
 - Create template readme. [Leah Lackner]
-- Bump version: 0.23.1 → 0.24.0. [Leah Lackner]
 - Allow manual workflow runs. [Leah Lackner]
-- Bump version: 0.23.0 → 0.23.1. [Leah Lackner]
 - Typo. [Leah Lackner]
-- Bump version: 0.22.0 → 0.23.0. [Leah Lackner]
 - Add link to gen_project_banner.py in Readme. [Leah Lackner]
-- Bump version: 0.21.0 → 0.22.0. [Leah Lackner]
 - Fix build. [Leah Lackner]
-- Bump version: 0.20.0 → 0.21.0. [Leah Lackner]
 - Add empty data folder. [Leah Lackner]
 - Change manifest. [Leah Lackner]
-- Bump version: 0.19.0 → 0.20.0. [Leah Lackner]
 - Insert newlines at end of file, since black does that as well. [Leah
   Lackner]
-- Bump version: 0.18.0 → 0.19.0. [Leah Lackner]
 - Add installation instructions (2) [Leah Lackner]
-- Bump version: 0.17.0 → 0.18.0. [Leah Lackner]
 - Install developer dependencies when building package in workflow.
   [Leah Lackner]
-- Bump version: 0.16.0 → 0.17.0. [Leah Lackner]
 - Use build package for building. [Leah Lackner]
-- Bump version: 0.15.0 → 0.16.0. [Leah Lackner]
 - Add options to Release workflow. [Leah Lackner]
-- Bump version: 0.14.0 → 0.15.0. [Leah Lackner]
 - Add info to Readme. [Leah Lackner]
-- Bump version: 0.13.0 → 0.14.0. [Leah Lackner]
 - Add automatic pypa release workflow (disabled on default) [Leah
   Lackner]
 - Make tests into a package. [Leah Lackner]
@@ -64,26 +51,17 @@ v0.25.0 (2022-06-16)
 - Add license reference to setup.cfg. [Leah Lackner]
 - Add license header to setup.py. [Leah Lackner]
 - Add link to repository in Readme. [Leah Lackner]
-- Bump version: 0.12.0 → 0.13.0. [Leah Lackner]
 - Add emoji. [Leah Lackner]
-- Bump version: 0.11.0 → 0.12.0. [Leah Lackner]
 - Add contributing info. [Leah Lackner]
-- Bump version: 0.10.0 → 0.11.0. [Leah Lackner]
 - Link header to project page. [Leah Lackner]
-- Bump version: 0.9.0 → 0.10.0. [Leah Lackner]
 - Add pdoc --math test to examples. [Leah Lackner]
-- Bump version: 0.8.0 → 0.9.0. [Leah Lackner]
 - Simplify and extend configure script. [Leah Lackner]
 - Add badge. [Leah Lackner]
-- Bump version: 0.7.0 → 0.8.0. [Leah Lackner]
 - Prettify readmes (2) [Leah Lackner]
-- Bump version: 0.6.0 → 0.7.0. [Leah Lackner]
 - Prettify readmes. [Leah Lackner]
 - Add examples file to documentation. [Leah Lackner]
-- Bump version: 0.5.0 → 0.6.0. [Leah Lackner]
 - Add commands section to Readme. [Leah Lackner]
 - Add --math to pdoc. [Leah Lackner]
-- Bump version: 0.4.0 → 0.5.0. [Leah Lackner]
 - Main -> cli and small changes. [Leah Lackner]
 - Add imports to __init__.py. [Leah Lackner]
 - Add examples for calling package without installing and add some
@@ -92,7 +70,6 @@ v0.25.0 (2022-06-16)
 - Add link to documentation in Readme. [Leah Lackner]
 - Update documentation workflow. [Leah Lackner]
 - Include pdoc for documentation (with GitHub pages) [Leah Lackner]
-- Bump version: 0.3.0 → 0.4.0. [Leah Lackner]
 - Use semantic-version package. [Leah Lackner]
 - Upload pypi commands and documentation. [Leah Lackner]
 - Add setup.py commands and remove build and test from pre-commit hook.
@@ -107,12 +84,10 @@ v0.25.0 (2022-06-16)
 - Add alt texts to images; link header image. [Leah Lackner]
 - Typo. [Leah Lackner]
 - Version to __version__.py. [Leah Lackner]
-- Bump version: 0.2.0 → 0.3.0. [Leah Lackner]
 - Move python package to root. [Leah Lackner]
 - Fix configure script. [Leah Lackner]
 - Rename project; make configure-template.sh more re-usable. [Leah
   Lackner]
-- Bump version: 0.1.0 → 0.2.0. [Leah Lackner]
 - Update features in readme. [Leah Lackner]
 - Add test coverage svg to readme. [Leah Lackner]
 - Debug coverage workflow (5) [Leah Lackner]
@@ -127,7 +102,6 @@ v0.25.0 (2022-06-16)
 - Fix setup.py with pyproject.toml and setup.cfg. [Leah Lackner]
 - Rename img folder. [Leah Lackner]
 - Setup tools. [Leah Lackner]
-- Bump version: 0.0.1 → 0.1.0. [Leah Lackner]
 - Configure bumpversion. [Leah Lackner]
 - Add bumpversion. [Leah Lackner]
 - Add to gitignore. [Leah Lackner]
