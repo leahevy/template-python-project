@@ -165,6 +165,11 @@ rm -f ./README.md
 mv ./README-template.md ./README.md || true
 
 
+# Remove changelog
+##################
+rm -f ./CHANGELOG.md
+
+
 # Delete self
 #############
 rm -f "./$SCRIPT_NAME"
