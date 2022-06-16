@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.30.0 (2022-06-16)
+--------------------
+- Improve release workflow message (2) [Leah Lackner]
+
+
 v0.29.0 (2022-06-16)
 --------------------
 - Improve release workflow message. [Leah Lackner]
