@@ -6,7 +6,7 @@ Want to add a contribution to **template-python-project**? Feel free to send a [
 
 ## 💿 Setup development environment
 
-To setup your development environment it, is recommended to setup some kind of virtual Python environment such as [pyenv](https://github.com/pyenv/pyenv) with [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
+Setup a virtualenv with `make virtualenv-create` and `source ./.venv/bin/activate` or `source ./.venv/bin/activate.fish`.
 
 After that you can install the development dependencies with `make install-dev`.
 

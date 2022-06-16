@@ -74,6 +74,12 @@ test: ## Runs the unittests and doctests
 	coverage html
 	@echo
 
+.PHONY: virtualenv-create
+virtualenv-create: ## Creates a new virtualenv
+	@rm -rf .venv
+	@python -m venv .venv
+	@echo "! Run 'source ./.venv/bin/activate' to enable the environment !"
+
 .PHONY: build
 build: ## Builds the package
 	@rm -rf dist
