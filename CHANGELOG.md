@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.28.0 (2022-06-16)
+--------------------
+- Update release workflows. [Leah Lackner]
+
+
 v0.27.0 (2022-06-16)
 --------------------
 - [fix] Makefile. [Leah Lackner]

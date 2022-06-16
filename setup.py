@@ -33,7 +33,7 @@ def read_requirements(file: str) -> list[str]:
 
 setup_info = dict(
     name="template-python-project",
-    version="0.27.0",
+    version="0.28.0",
     author="Leah Lackner",
     author_email="leah.lackner+github@gmail.com",
     url="https://github.com/leahevy/template-python-project",
