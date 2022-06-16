@@ -161,6 +161,7 @@ release-major: ## Releases a new major version
 .PHONY: --run-release-major
 --run-release-major:
 	$(WORKDIR_CLEAN)
+	@if ! command -v gitchangelog &> /dev/null; then echo "Install dev requirements first" >&2; exit 1; fi
 	bump2version major
 	$(MAKE) -- --do-release
 
@@ -171,6 +172,7 @@ release-minor: ## Releases a new minor version
 .PHONY: --run-release-minor
 --run-release-minor:
 	$(WORKDIR_CLEAN)
+	@if ! command -v gitchangelog &> /dev/null; then echo "Install dev requirements first" >&2; exit 1; fi
 	bump2version minor
 	$(MAKE) -- --do-release
 
@@ -181,5 +183,6 @@ release-patch: ## Releases a new patch version
 .PHONY: --run-release-patch
 --run-release-patch:
 	$(WORKDIR_CLEAN)
+	@if ! command -v gitchangelog &> /dev/null; then echo "Install dev requirements first" >&2; exit 1; fi
 	bump2version patch
 	$(MAKE) -- --do-release
