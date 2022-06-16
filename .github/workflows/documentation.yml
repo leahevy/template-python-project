@@ -24,13 +24,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -e .
-    - name: Install developer dependencies
-      run: |
-        pip install -e .[dev]
+        make install-dev
     - name: Generate documentation
       run: |
-        pdoc -o docs --math template_python_project
+        make make-docs
     - name: Checkout documentation branch
       run: |
         mv docs /tmp/
