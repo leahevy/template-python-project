@@ -16,6 +16,8 @@
 <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Formatted with black"/></a>
 <a href="https://opensource.fb.com/support-ukraine"><img src="https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB" alt="Support Ukraine"/></a>
 </p>
+
+> **HOW TO USE THIS TEMPLATE:** go to <https://github.com/leahevy/template-python-project/generate> to generate a new repository using this template. After that run the provided `./configure-template.sh` script.
   
 ---
 
