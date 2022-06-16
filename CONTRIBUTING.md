@@ -43,7 +43,7 @@ The following custom **setup.py** commands are available:
 
 ---
 
-## ☁️ How to Create Releases
+## ☁️ How to Create Releases on GitHub
 
 A release commit should advance the version.
 
@@ -76,7 +76,7 @@ After that a release should be published at *github.com/leahevy* named as *v1.0.
 
 ---
 
-## 🏷 How to Create Releases
+## 🏷 How to publish releases on Pypi
 
 Create an account on <https://pypi.org/account/register/>
 
