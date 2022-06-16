@@ -1,11 +1,11 @@
-name: Release
+name: Release on Pypi
 
 # Disabled workflow in template. 
 # To enable, exchange the commented blocks.
 # on:
 #   push:
-#     branches:
-#       - master
+#     tags:
+#       - '*'
 #   workflow_dispatch: {}
 on:
   push:
@@ -26,15 +26,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         make install-dev-noprecommit
-    - name: Build
+    - name: Build and publish
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: |
-        make build
-    - name: Publish
-      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
-      uses: pypa/gh-action-pypi-publish@master
-      with:
-        user: __token__
-        password: ${{ secrets.pypi_api_token }}
-        skip_existing: true
-        verbose: true
-        print_hash: true
+        make upload-pypi-public

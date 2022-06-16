@@ -34,4 +34,4 @@ Create an account on <https://pypi.org/account/register/>
 
 Use the provided **Makefile** commands to upload the package: `make upload-pypi-test` (*testpypi* repository) and `make upload-pypi-public` (default *pypi* repository).
 
-You can also activate the automatic release workflow (**./.github/workflows/release.yml**) and setup the secret **pypi_api_token**.
+You can also activate the automatic release workflow (**./.github/workflows/release.yml**) and setup the secret **PYPI_API_TOKEN**.

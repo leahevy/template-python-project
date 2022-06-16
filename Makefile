@@ -113,7 +113,7 @@ upload-pypi-public: ## Builds and uploads the package to pypi (public repository
 
 .PHONY: upload-pypi-test
 upload-pypi-test: ## Builds and uploads the package to pypi (testpypi repository)
-	$(MAKE) -- --run-upload-pypi-test
+	@$(MAKE) -- --run-upload-pypi-test
 
 .PHONY: --run-upload-pypi-test
 --run-upload-pypi-test: build
@@ -156,33 +156,33 @@ run-all-checks: check-format check-types check-style build test
 
 .PHONY: release-major
 release-major: ## Releases a new major version
-	$(MAKE) -- --run-release-major
+	@$(MAKE) -- --run-release-major
 
 .PHONY: --run-release-major
 --run-release-major:
 	$(WORKDIR_CLEAN)
 	@if ! command -v gitchangelog &> /dev/null; then echo "Install dev requirements first" >&2; exit 1; fi
 	bump2version major
-	$(MAKE) -- --do-release
+	@$(MAKE) -- --do-release
 
 .PHONY: release-minor
 release-minor: ## Releases a new minor version
-	$(MAKE) -- --run-release-minor
+	@$(MAKE) -- --run-release-minor
 
 .PHONY: --run-release-minor
 --run-release-minor:
 	$(WORKDIR_CLEAN)
 	@if ! command -v gitchangelog &> /dev/null; then echo "Install dev requirements first" >&2; exit 1; fi
 	bump2version minor
-	$(MAKE) -- --do-release
+	@$(MAKE) -- --do-release
 
 .PHONY: release-patch
 release-patch: ## Releases a new patch version
-	$(MAKE) -- --run-release-patch
+	@$(MAKE) -- --run-release-patch
 
 .PHONY: --run-release-patch
 --run-release-patch:
 	$(WORKDIR_CLEAN)
 	@if ! command -v gitchangelog &> /dev/null; then echo "Install dev requirements first" >&2; exit 1; fi
 	bump2version patch
-	$(MAKE) -- --do-release
+	@$(MAKE) -- --do-release
