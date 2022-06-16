@@ -20,31 +20,11 @@ To see the development commands, run `make help`.
 
 ## ☁️ How to Create Releases on GitHub
 
-Advance the version with one of:
-
-- `make bump-major`
-- `make bump-major`
-- `make bump-patch`
-
-After that a release should be published at *github.com/leahevy* named as *v1.0.0* with a description describing the new features and fixes, e.g.:
-
-```markdown
-# 🟢 Version 1.0.0
-
-## ✨ New features
-
-- Some change
-- Another change
-
-## 🐞 Bugfixes
-
-- Some fix
-- Another fix
-
-## 🌍 See also
-
-**Full Changelog**: <https://github.com/leahevy/template-python-project/compare/v0.0.9...v1.0.0>
-```
+1. In a clean work directory, create a release with one of:
+    - `make release-major`
+    - `make release-major`
+    - `make release-patch`
+2. Push the new release commit with `git push --follow-tags`
 
 ---
 
@@ -54,4 +34,4 @@ Create an account on <https://pypi.org/account/register/>
 
 Use the provided **Makefile** commands to upload the package: `make upload-pypi-test` (*testpypi* repository) and `make upload-pypi-public` (default *pypi* repository).
 
-You can also activate the automatic release workflow (**./.github/workflows/release.yml**).
+You can also activate the automatic release workflow (**./.github/workflows/release.yml**) and setup the secret **pypi_api_token**.

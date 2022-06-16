@@ -21,6 +21,8 @@ FILES = ./$(PACKAGE_NAME) ./tests ./setup.py
 WORKDIR_CLEAN = @git diff --quiet --exit-code || { echo "Workdir not clean"; exit 1; } && \
 					git diff --cached --quiet --exit-code || { echo "Uncommited staged changes"; exit 1; }
 
+TAG_LAST_COMMIT = $(shell git describe --exact-match HEAD 2>/dev/null)
+
 .PHONY: all
 all: help
 
@@ -103,19 +105,19 @@ serve-docs: ## Serves the documentation (Opens in a browser)
 
 .PHONY: upload-pypi-public
 upload-pypi-public: ## Builds and uploads the package to pypi (public repository)
-	@$(MAKE) run-upload-pypi-public
+	@$(MAKE) -- --run-upload-pypi-public
 
-.PHONY: run-upload-pypi-public
-run-upload-pypi-public: build
-	echo twine upload dist/*
+.PHONY: --run-upload-pypi-public
+--run-upload-pypi-public: build
+	twine upload dist/*
 
 .PHONY: upload-pypi-test
 upload-pypi-test: ## Builds and uploads the package to pypi (testpypi repository)
-	$(MAKE) run-upload-pypi-test
+	$(MAKE) -- --run-upload-pypi-test
 
-.PHONY: run-upload-pypi-test
-run-upload-pypi-test: build
-	echo twine upload --repository testpypi dist/*
+.PHONY: --run-upload-pypi-test
+--run-upload-pypi-test: build
+	twine upload --repository testpypi dist/*
 
 .PHONY: pre-commit-check
 pre-commit-check: ## Runs the pre-commit checks (format, types, style)
@@ -131,44 +133,53 @@ all-checks: ## Runs all checks (format, types, style, build, test)
 .PHONY: run-all-checks
 run-all-checks: check-format check-types check-style build test
 
-.PHONY: prepare-release
-prepare-release:
+.PHONY: --do-release
+--do-release:
 	$(WORKDIR_CLEAN)
-	gitchangelog > CHANGELOG.md
-	git add CHANGELOG.md
+	@echo "Checking if the last commit is tagged..."
+	@[ "$(TAG_LAST_COMMIT)" = "" ] && exit 1 || true
+	@gitchangelog > CHANGELOG.md
+	@egrep -q "^(unreleased)" CHANGELOG.md && { echo "Unreleased changes..."; git checkout CHANGELOG.md; exit 1; } || true
+	@egrep -v "^\s*- Bump version:.*" CHANGELOG.md > CHANGELOG.md.2
+	@rm CHANGELOG.md
+	@mv CHANGELOG.md.2 CHANGELOG.md
+	@egrep -v "^\s*- Release: version .*" CHANGELOG.md > CHANGELOG.md.2
+	@rm CHANGELOG.md
+	@mv CHANGELOG.md.2 CHANGELOG.md
+	@git add CHANGELOG.md
+	@git commit --amend -s -m "Release: version $(TAG_LAST_COMMIT)"
+	@git tag -d "$(TAG_LAST_COMMIT)"
+	@git tag -as "$(TAG_LAST_COMMIT)" -m "Release: version $(TAG_LAST_COMMIT)"
+	@echo
+	@echo "Created release commit for version `git describe --exact-match HEAD`"
+	@echo "Push the new release with 'git push --follow-tags'"
 
-.PHONY: bump-major
-bump-major: ## Bumps the major version (tagged)
-	$(MAKE) run-bump-major
+.PHONY: release-major
+release-major: ## Releases a new major version
+	$(MAKE) -- --run-release-major
 
-.PHONY: run-bump-major
-run-bump-major: prepare-release
+.PHONY: --run-release-major
+--run-release-major:
 	$(WORKDIR_CLEAN)
-	bump2version major --tag
+	bump2version major
+	$(MAKE) -- --do-release
 
-.PHONY: bump-minor
-bump-minor: ## Bumps the minor version (tagged)
-	$(MAKE) run-bump-minor
+.PHONY: release-minor
+release-minor: ## Releases a new minor version
+	$(MAKE) -- --run-release-minor
 
-.PHONY: run-bump-minor
-run-bump-minor: prepare-release
+.PHONY: --run-release-minor
+--run-release-minor:
 	$(WORKDIR_CLEAN)
-	bump2version minor --tag
+	bump2version minor
+	$(MAKE) -- --do-release
 
-.PHONY: bump-patch
-bump-patch: ## Bumps the patch version (untagged)
-	$(MAKE) run-bump-patch
+.PHONY: release-patch
+release-patch: ## Releases a new patch version
+	$(MAKE) -- --run-release-patch
 
-.PHONY: run-bump-patch
-run-bump-patch:
+.PHONY: --run-release-patch
+--run-release-patch:
 	$(WORKDIR_CLEAN)
 	bump2version patch
-
-.PHONY: bump-patch-tagged
-bump-patch-tagged: ## Bumps the patch version (tagged)
-	$(MAKE) run-bump-patch-tagged
-
-.PHONY: run-bump-patch-tagged
-run-bump-patch-tagged: prepare-release
-	$(WORKDIR_CLEAN)
-	bump2version patch --tag
+	$(MAKE) -- --do-release

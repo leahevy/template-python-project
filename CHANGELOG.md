@@ -4,6 +4,8 @@ Changelog
 
 (unreleased)
 ------------
+- Configure gitchangelog. [Leah Lackner]
+- Add gitchangelog.rc. [Leah Lackner]
 - [wip] use gitchangelog for releases. [Leah Lackner]
 - Add funding config. [Leah Lackner]
 - Add pull request template. [Leah Lackner]
@@ -11,9 +13,17 @@ Changelog
 - Move virtualenv create to Makefile. [Leah Lackner]
 - Generate coverage report in test command. [Leah Lackner]
 - Better requirements parsing. [Leah Lackner]
+
+
+v0.26.0 (2022-06-16)
+--------------------
 - Bump version: 0.25.0 → 0.26.0. [Leah Lackner]
 - No pre-commit install in workflows. [Leah Lackner]
 - Makefile commands. [Leah Lackner]
+
+
+v0.25.0 (2022-06-16)
+--------------------
 - Bump version: 0.24.0 → 0.25.0. [Leah Lackner]
 - Move commands from setup.py and .pre-commit.sh to Makefile. [Leah
   Lackner]
