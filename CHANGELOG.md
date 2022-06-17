@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.38.0 (2022-06-17)
+--------------------
+- Rename api to lib. [Leah Lackner]
+
+
 v0.37.0 (2022-06-17)
 --------------------
 - Inject package with fixture + license headers. [Leah Lackner]
