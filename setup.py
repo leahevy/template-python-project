@@ -38,7 +38,7 @@ setup_info = dict(
     author_email="leah.lackner+github@gmail.com",
     url="https://github.com/leahevy/template-python-project",
     project_urls={
-        "Documentation": "https://github.com/leahevy/"
+        "Documentation": "https://leahevy.github.io/"
         "template-python-project"
         "/blob/master/README.md",
         "Source": "https://github.com/leahevy/template-python-project",
