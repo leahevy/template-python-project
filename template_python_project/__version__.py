@@ -15,7 +15,7 @@
 
 import semantic_version  # type: ignore
 
-__version__ = "0.34.0"
+__version__ = "0.35.0"
 
 _v = semantic_version.Version(__version__)
 

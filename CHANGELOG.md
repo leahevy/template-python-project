@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+v0.35.0 (2022-06-17)
+--------------------
+- Setup urls to multiple lines. [Leah Lackner]
+- Update documentation link. [Leah Lackner]
+
+
 v0.34.0 (2022-06-17)
 --------------------
 - Update badges. [Leah Lackner]
