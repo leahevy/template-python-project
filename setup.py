@@ -39,8 +39,7 @@ setup_info = dict(
     url="https://github.com/leahevy/template-python-project",
     project_urls={
         "Documentation": "https://leahevy.github.io/"
-        "template-python-project"
-        "/blob/master/README.md",
+        "template-python-project",
         "Source": "https://github.com/leahevy/" "template-python-project",
         "Tracker": "https://github.com/leahevy/"
         "template-python-project"
