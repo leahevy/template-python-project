@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.34.0 (2022-06-17)
+--------------------
+- Update badges. [Leah Lackner]
+
+
 v0.33.0 (2022-06-17)
 --------------------
 - Fix release workflow. [Leah Lackner]
