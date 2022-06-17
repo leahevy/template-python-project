@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.39.0 (2022-06-17)
+--------------------
+- Add note about shell completion. [Leah Lackner]
+
+
 v0.38.0 (2022-06-17)
 --------------------
 - Rename api to lib. [Leah Lackner]
