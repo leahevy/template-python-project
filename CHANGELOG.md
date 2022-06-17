@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.31.0 (2022-06-17)
+--------------------
+- Allow workflow dispatch for release script. [Leah Lackner]
+
+
 v0.30.2 (2022-06-16)
 --------------------
 - Fix configure script (2) [Leah Lackner]
