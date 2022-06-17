@@ -18,13 +18,13 @@
 from types import ModuleType
 
 
-def test_template_python_project_api_some(
+def test_template_python_project_lib_some(
     template_python_project: ModuleType,
 ) -> None:
-    template_python_project.api.some_api_func()
+    template_python_project.lib.some_lib_func()
 
 
-def test_template_python_project_api_other(
+def test_template_python_project_lib_other(
     template_python_project: ModuleType,
 ) -> None:
-    template_python_project.api.other_api_func()
+    template_python_project.lib.other_lib_func()

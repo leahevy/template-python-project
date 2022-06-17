@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     _sys.path.append(_os.path.join(_os.path.dirname(__file__), ".."))
 
-import template_python_project.api
+import template_python_project.lib
 from template_python_project.__version__ import __version__
 
 app = typer.Typer()
@@ -51,19 +51,19 @@ def version_callback(value: bool) -> None:
 
 
 @app.command()
-def api1() -> None:
+def lib1() -> None:
     """
-    Calls an example API function.
+    Calls an example library function.
     """
-    template_python_project.api.some_api_func()
+    template_python_project.lib.some_lib_func()
 
 
 @app.command()
-def api2() -> None:
+def lib2() -> None:
     """
-    Calls another API function.
+    Calls another library function.
     """
-    template_python_project.api.other_api_func()
+    template_python_project.lib.other_lib_func()
 
 
 @app.callback(invoke_without_command=True)
@@ -85,7 +85,7 @@ def main_callback(
     True
     """
     if ctx.invoked_subcommand is None:
-        api1()
+        lib1()
 
 
 def main() -> None:

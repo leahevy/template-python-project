@@ -50,10 +50,10 @@ For installation of the latest version you can install it with pip directly from
 The following commands are available:
 
 <dl>
-  <dt><strong>api1</strong></dt>
-  <dd>Calls an example API function.</dd>
-  <dt><strong>api2</strong></dt>
-  <dd>Calls another API function.</dd>
+  <dt><strong>lib1</strong></dt>
+  <dd>Calls an example library function.</dd>
+  <dt><strong>lib2</strong></dt>
+  <dd>Calls another library function.</dd>
 </dl>
 
 ---
