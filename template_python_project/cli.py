@@ -18,6 +18,7 @@
 Some description comes here.
 """
 
+import os
 import os.path
 import sys
 from typing import Optional
@@ -35,7 +36,9 @@ if __name__ == "__main__":
 import template_python_project.lib
 from template_python_project.__version__ import __version__
 
-app = typer.Typer()
+DEFAULT_COMMAND = "lib1"
+
+app = typer.Typer(context_settings={"help_option_names": ["-h", "--help"]})
 
 
 def version_callback(value: bool) -> None:
@@ -85,7 +88,7 @@ def main_callback(
     True
     """
     if ctx.invoked_subcommand is None:
-        lib1()
+        os.execv(sys.argv[0], [sys.argv[0], DEFAULT_COMMAND] + sys.argv[1:])
 
 
 def main() -> None:
