@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.32.0 (2022-06-17)
+--------------------
+- Fix bumpversion in configure script. [Leah Lackner]
+
+
 v0.31.0 (2022-06-17)
 --------------------
 - Allow workflow dispatch for release script. [Leah Lackner]
