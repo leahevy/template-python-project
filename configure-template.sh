@@ -170,6 +170,13 @@ mv ./README-template.md ./README.md || true
 rm -f ./CHANGELOG.md
 
 
+# Fix bumpversion
+#################
+sed '/configure-template.sh/d' ./.bumpversion.cfg > ./.bumpversion.cfg.2
+rm -f "./.bumpversion.cfg"
+mv "./.bumpversion.cfg.2" "./.bumpversion.cfg"
+
+
 # Delete self
 #############
 rm -f "./$SCRIPT_NAME"
