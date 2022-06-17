@@ -41,9 +41,10 @@ setup_info = dict(
         "Documentation": "https://leahevy.github.io/"
         "template-python-project"
         "/blob/master/README.md",
-        "Source": "https://github.com/leahevy/template-python-project",
+        "Source": "https://github.com/leahevy/" "template-python-project",
         "Tracker": "https://github.com/leahevy/"
-        "template-python-project/issues",
+        "template-python-project"
+        "/issues",
     },
     description="A Python project template.",
     long_description=read_file("README.md"),
