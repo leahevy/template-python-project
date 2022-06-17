@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.36.0 (2022-06-17)
+--------------------
+- Fix documentation link. [Leah Lackner]
+
+
 v0.35.0 (2022-06-17)
 --------------------
 - Setup urls to multiple lines. [Leah Lackner]
