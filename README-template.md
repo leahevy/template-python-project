@@ -45,6 +45,16 @@ For installation of the latest version you can install it with pip directly from
 
 ---
 
+## 💡 Shell completion
+
+For shell completion run one of the appropriate commands:
+
+- `template-python-project --install-completion=bash`
+- `template-python-project --install-completion=zsh`
+- `template-python-project --install-completion=fish`
+
+---
+
 ## ⌨️ Commands
 
 The following commands are available:
