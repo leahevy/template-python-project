@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+v0.40.0 (2022-06-17)
+--------------------
+- Fix default command and -h for help. [Leah Lackner]
+
+
 v0.39.0 (2022-06-17)
 --------------------
 - Add note about shell completion. [Leah Lackner]
