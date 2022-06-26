@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+v0.40.1 (2022-06-26)
+--------------------
+- Use pip cache in workflows. [Leah Lackner]
+- Only build new documentation on releases. [Leah Lackner]
+
+
 v0.40.0 (2022-06-17)
 --------------------
 - Fix default command and -h for help. [Leah Lackner]
